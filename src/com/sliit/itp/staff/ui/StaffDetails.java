@@ -72,6 +72,7 @@ public class StaffDetails extends javax.swing.JFrame {
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 30, 170, 40));
 
         pnlAddEmployee.setBackground(new java.awt.Color(0, 97, 17));
+        pnlAddEmployee.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         pnlAddEmployee.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         pnlAddEmployee.setPreferredSize(new java.awt.Dimension(190, 41));
         pnlAddEmployee.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -86,16 +87,12 @@ public class StaffDetails extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/icons8-add-user-male-20.png"))); // NOI18N
         jLabel4.setText("Add Employee");
-        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel4MouseClicked(evt);
-            }
-        });
         pnlAddEmployee.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, 41));
 
         jPanel2.add(pnlAddEmployee, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 220, -1));
 
         pnlUserDetails.setBackground(new java.awt.Color(0, 97, 17));
+        pnlUserDetails.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         pnlUserDetails.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         pnlUserDetails.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -109,16 +106,12 @@ public class StaffDetails extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/icons8-details-20.png"))); // NOI18N
         jLabel2.setText("User Details");
-        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel2MouseClicked(evt);
-            }
-        });
         pnlUserDetails.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 162, 41));
 
         jPanel2.add(pnlUserDetails, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 220, -1));
 
         pnlExit.setBackground(new java.awt.Color(0, 97, 17));
+        pnlExit.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         pnlExit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         pnlExit.setPreferredSize(new java.awt.Dimension(220, 41));
         pnlExit.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -134,14 +127,9 @@ public class StaffDetails extends javax.swing.JFrame {
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/icons8-exit-20.png"))); // NOI18N
         jLabel5.setText("Exit Module");
         jLabel5.setFocusable(false);
-        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel5MouseClicked(evt);
-            }
-        });
         pnlExit.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 162, 41));
 
-        jPanel2.add(pnlExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 560, 220, -1));
+        jPanel2.add(pnlExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 560, 220, 40));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -157,28 +145,16 @@ public class StaffDetails extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel4MouseClicked
-
     private void pnlAddEmployeeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlAddEmployeeMouseClicked
         // TODO add your handling code here:
         addEmployee.setVisible(true);
     }//GEN-LAST:event_pnlAddEmployeeMouseClicked
-
-    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel2MouseClicked
 
     private void pnlUserDetailsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlUserDetailsMouseClicked
         pnlDynamic.add(userDetails, BorderLayout.PAGE_START);
         addEmployee.setVisible(false);
         userDetails.setVisible(true);
     }//GEN-LAST:event_pnlUserDetailsMouseClicked
-
-    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel5MouseClicked
 
     private void pnlExitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlExitMouseClicked
         // TODO add your handling code here:
