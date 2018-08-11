@@ -52,7 +52,6 @@ public class StaffManagementHome extends javax.swing.JFrame {
         setMaximumSize(new java.awt.Dimension(790, 510));
         setMinimumSize(new java.awt.Dimension(790, 510));
         setName("frHome"); // NOI18N
-        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
