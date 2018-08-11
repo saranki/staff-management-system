@@ -49,9 +49,11 @@ public class StaffManagementHome extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Staff Management Dashboard");
         setMaximumSize(new java.awt.Dimension(790, 510));
         setMinimumSize(new java.awt.Dimension(790, 510));
         setName("frHome"); // NOI18N
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -66,6 +68,11 @@ public class StaffManagementHome extends javax.swing.JFrame {
         jPanel2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel2.setName("pnlMarkAttendance"); // NOI18N
         jPanel2.setPreferredSize(new java.awt.Dimension(230, 200));
+        jPanel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel2MouseClicked(evt);
+            }
+        });
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Segoe UI Light", 0, 20)); // NOI18N
@@ -189,25 +196,31 @@ public class StaffManagementHome extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI Light", 0, 36)); // NOI18N
         jLabel1.setText("STAFF MANAGEMENT SYSTEM");
         jLabel1.setName("lblStaffDetails"); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 500, 50));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 470, 60));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        setSize(new java.awt.Dimension(804, 549));
+        pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
     // Open Leave Details UI
     private void jPanel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel5MouseClicked
         LeaveManagement leaveManagement = new LeaveManagement();
-        leaveManagement.show();
-        this.hide();
+        leaveManagement.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jPanel5MouseClicked
 
     private void pnlStaffDetailsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlStaffDetailsMouseClicked
         StaffDetails staffDetails = new StaffDetails();
         staffDetails.setVisible(true);
-        this.setVisible(false);
+        this.dispose();
     }//GEN-LAST:event_pnlStaffDetailsMouseClicked
+
+    private void jPanel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MouseClicked
+        // TODO add your handling code here:
+//        this.dispose();
+         System.exit(0);
+    }//GEN-LAST:event_jPanel2MouseClicked
 
     /**
      * @param args the command line arguments

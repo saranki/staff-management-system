@@ -69,7 +69,7 @@ public class StaffDetails extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Segoe UI Light", 0, 20)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("EMPLOYEE DETAILS");
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 170, 40));
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 170, 40));
 
         pnlAddEmployee.setBackground(new java.awt.Color(64, 0, 33));
         pnlAddEmployee.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -89,7 +89,7 @@ public class StaffDetails extends javax.swing.JFrame {
         jLabel4.setText("Add Employee");
         pnlAddEmployee.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, 41));
 
-        jPanel2.add(pnlAddEmployee, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 220, -1));
+        jPanel2.add(pnlAddEmployee, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 220, -1));
 
         pnlUserDetails.setBackground(new java.awt.Color(64, 0, 33));
         pnlUserDetails.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -108,7 +108,7 @@ public class StaffDetails extends javax.swing.JFrame {
         jLabel2.setText("User Details");
         pnlUserDetails.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 162, 41));
 
-        jPanel2.add(pnlUserDetails, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, 220, -1));
+        jPanel2.add(pnlUserDetails, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 220, -1));
 
         pnlExit.setBackground(new java.awt.Color(64, 0, 33));
         pnlExit.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -160,7 +160,7 @@ public class StaffDetails extends javax.swing.JFrame {
         // TODO add your handling code here:
         StaffManagementHome staffHome = new StaffManagementHome();
         staffHome.setVisible(true);
-        this.setVisible(false);
+        this.dispose();
     }//GEN-LAST:event_pnlExitMouseClicked
 
     /**
