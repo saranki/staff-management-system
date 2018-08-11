@@ -50,17 +50,18 @@ public class StaffManagementHome extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Staff Management Dashboard");
-        setMaximumSize(new java.awt.Dimension(790, 510));
-        setMinimumSize(new java.awt.Dimension(790, 510));
+        setMaximumSize(new java.awt.Dimension(750, 540));
+        setMinimumSize(new java.awt.Dimension(750, 540));
         setName("frHome"); // NOI18N
         setResizable(false);
+        setSize(new java.awt.Dimension(750, 540));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setMaximumSize(new java.awt.Dimension(790, 510));
-        jPanel1.setMinimumSize(new java.awt.Dimension(790, 510));
+        jPanel1.setMaximumSize(new java.awt.Dimension(750, 540));
+        jPanel1.setMinimumSize(new java.awt.Dimension(750, 540));
         jPanel1.setName("pnlDashboard"); // NOI18N
-        jPanel1.setPreferredSize(new java.awt.Dimension(790, 510));
+        jPanel1.setPreferredSize(new java.awt.Dimension(750, 540));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
@@ -85,7 +86,7 @@ public class StaffManagementHome extends javax.swing.JFrame {
         jLabel10.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, -1, -1));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 290, -1, -1));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 320, -1, -1));
 
         pnlStaffDetails.setBackground(new java.awt.Color(255, 255, 255));
         pnlStaffDetails.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -110,7 +111,7 @@ public class StaffManagementHome extends javax.swing.JFrame {
         jLabel3.setName("lblStaffDetails"); // NOI18N
         pnlStaffDetails.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, -1, -1));
 
-        jPanel1.add(pnlStaffDetails, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, -1, -1));
+        jPanel1.add(pnlStaffDetails, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, -1, -1));
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
         jPanel4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -129,7 +130,7 @@ public class StaffManagementHome extends javax.swing.JFrame {
         jLabel8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanel4.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, -1, -1));
 
-        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, -1, -1));
+        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, -1, -1));
 
         jPanel5.setBackground(new java.awt.Color(255, 255, 255));
         jPanel5.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -153,7 +154,7 @@ public class StaffManagementHome extends javax.swing.JFrame {
         jLabel11.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanel5.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, -1, -1));
 
-        jPanel1.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 80, -1, -1));
+        jPanel1.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 110, -1, -1));
 
         jPanel6.setBackground(new java.awt.Color(255, 255, 255));
         jPanel6.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -172,7 +173,7 @@ public class StaffManagementHome extends javax.swing.JFrame {
         jLabel13.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanel6.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, -1, -1));
 
-        jPanel1.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 290, -1, -1));
+        jPanel1.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 320, -1, -1));
 
         jPanel8.setBackground(new java.awt.Color(255, 255, 255));
         jPanel8.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -191,12 +192,12 @@ public class StaffManagementHome extends javax.swing.JFrame {
         jLabel14.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanel8.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, -1, -1));
 
-        jPanel1.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 80, -1, -1));
+        jPanel1.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 110, -1, -1));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Light", 0, 36)); // NOI18N
         jLabel1.setText("STAFF MANAGEMENT SYSTEM");
         jLabel1.setName("lblStaffDetails"); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 470, 60));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 470, 80));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
