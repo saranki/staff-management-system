@@ -5,17 +5,24 @@
  */
 package com.sliit.itp.staff.ui.panel;
 
+import com.sliit.itp.service.Leave;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 /**
  *
  * @author user
  */
 public class ApplyLeave extends javax.swing.JPanel {
 
+    Leave leave = new Leave();
     /**
      * Creates new form ApplyLeave
      */
     public ApplyLeave() {
         initComponents();
+        pnlCurrentDate.setText(leave.getCurrentDate());
     }
 
     /**
@@ -42,14 +49,14 @@ public class ApplyLeave extends javax.swing.JPanel {
         jLabel10 = new javax.swing.JLabel();
         btnRequest1 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jDateChooser2 = new com.toedter.calendar.JDateChooser();
+        pnlCurrentDate = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox<>();
         jComboBox2 = new javax.swing.JComboBox<>();
         jDateChooser3 = new com.toedter.calendar.JDateChooser();
         jDateChooser4 = new com.toedter.calendar.JDateChooser();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
+        jLabel12 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setMaximumSize(new java.awt.Dimension(580, 600));
@@ -58,47 +65,48 @@ public class ApplyLeave extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(580, 600));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(0, 102, 0));
+        jPanel1.setBackground(new java.awt.Color(0, 51, 0));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Light", 0, 16)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("APPLY LEAVE");
+        jLabel1.setText("LEAVE REQUEST");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
 
         add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 580, 50));
 
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel3.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jLabel3.setText("Employee ID : ");
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jLabel4.setText("Request Date :");
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 90, 20));
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 90, 20));
 
         jLabel5.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jLabel5.setText("Duration :");
-        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, 80, 20));
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 80, 20));
 
         jLabel6.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jLabel6.setText("From : ");
-        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 170, 50, 20));
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, 50, 20));
 
         jLabel7.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jLabel7.setText("To :");
-        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 210, 30, 20));
+        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 230, 30, 20));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jLabel2.setText("Reason :");
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 250, 60, 20));
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, 60, 20));
 
         jLabel8.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jLabel8.setText("Leave Type :");
-        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 80, 20));
+        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 80, 20));
 
-        btnReset.setBackground(new java.awt.Color(0, 102, 0));
+        btnReset.setBackground(new java.awt.Color(12, 38, 0));
 
         jLabel10.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
@@ -128,9 +136,9 @@ public class ApplyLeave extends javax.swing.JPanel {
 
         jLabel10.getAccessibleContext().setAccessibleName("btnReset");
 
-        jPanel2.add(btnReset, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 390, 120, 40));
+        jPanel2.add(btnReset, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 410, 120, 40));
 
-        btnRequest1.setBackground(new java.awt.Color(0, 102, 0));
+        btnRequest1.setBackground(new java.awt.Color(12, 38, 0));
         btnRequest1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel9.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
@@ -138,27 +146,34 @@ public class ApplyLeave extends javax.swing.JPanel {
         jLabel9.setText("SUBMIT");
         btnRequest1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, -1, -1));
 
-        jPanel2.add(btnRequest1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 390, 120, 40));
+        jPanel2.add(btnRequest1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 410, 120, 40));
 
-        jLabel11.setText("jLabel11");
-        jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, 150, 20));
-        jPanel2.add(jDateChooser2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 50, 210, -1));
+        pnlCurrentDate.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
+        pnlCurrentDate.setText("jLabel11");
+        jPanel2.add(pnlCurrentDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 70, 150, 20));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel2.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 90, 210, -1));
+        jComboBox1.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select a leave type", "Casual Leave", "Sick Leave", "Paid Leave" }));
+        jPanel2.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 110, 210, -1));
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel2.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 130, 210, -1));
-        jPanel2.add(jDateChooser3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 170, 210, -1));
-        jPanel2.add(jDateChooser4, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 210, 210, -1));
+        jComboBox2.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Duration", "Half Day", "Full Day" }));
+        jPanel2.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 150, 210, -1));
+        jPanel2.add(jDateChooser3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 190, 210, -1));
+        jPanel2.add(jDateChooser4, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 230, 210, -1));
 
         jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
-        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 260, 410, -1));
+        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 280, 410, -1));
 
-        add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 560, 440));
+        jLabel12.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
+        jLabel12.setText("jLabel11");
+        jPanel2.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 30, 150, 20));
+
+        add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 580, 490));
 
         getAccessibleContext().setAccessibleName("pnlApplyLeave");
     }// </editor-fold>//GEN-END:initComponents
@@ -170,12 +185,11 @@ public class ApplyLeave extends javax.swing.JPanel {
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
     private com.toedter.calendar.JDateChooser jDateChooser1;
-    private com.toedter.calendar.JDateChooser jDateChooser2;
     private com.toedter.calendar.JDateChooser jDateChooser3;
     private com.toedter.calendar.JDateChooser jDateChooser4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -188,5 +202,6 @@ public class ApplyLeave extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JLabel pnlCurrentDate;
     // End of variables declaration//GEN-END:variables
 }

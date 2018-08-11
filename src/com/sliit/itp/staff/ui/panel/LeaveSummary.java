@@ -29,6 +29,18 @@ public class LeaveSummary extends javax.swing.JPanel {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        dateLeaveReqDate = new com.toedter.calendar.JDateChooser();
+        dateLeaveFrom = new com.toedter.calendar.JDateChooser();
+        dateLeaveTo = new com.toedter.calendar.JDateChooser();
+        cmbLeaveMonth = new javax.swing.JComboBox<>();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tblLeaveSummary = new javax.swing.JTable();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setMaximumSize(new java.awt.Dimension(580, 600));
@@ -37,7 +49,7 @@ public class LeaveSummary extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(580, 600));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(0, 102, 0));
+        jPanel1.setBackground(new java.awt.Color(0, 51, 0));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Light", 0, 16)); // NOI18N
@@ -47,12 +59,70 @@ public class LeaveSummary extends javax.swing.JPanel {
 
         add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 580, 50));
 
+        jPanel2.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
+        jLabel2.setText("MONTH:");
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, -1, -1));
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI Semibold", 0, 15)); // NOI18N
+        jLabel3.setText("SEARCH");
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
+
+        jLabel4.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
+        jLabel4.setText("DATE:");
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 40, -1, -1));
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
+        jLabel5.setText("FROM:");
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, -1, -1));
+
+        jLabel6.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
+        jLabel6.setText("TO:");
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 70, -1, -1));
+        jPanel2.add(dateLeaveReqDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 40, 160, -1));
+        jPanel2.add(dateLeaveFrom, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 70, 170, -1));
+        jPanel2.add(dateLeaveTo, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 70, 160, -1));
+
+        cmbLeaveMonth.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE", "JULY", "AUGUST", "SEPTEMBER", "OCTOBAR", "NOVEMBER", "DECEMBER" }));
+        jPanel2.add(cmbLeaveMonth, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 40, 150, -1));
+
+        add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 580, 110));
+
+        tblLeaveSummary.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "FROM", "TO", "LEAVE TYPE", "DURATION"
+            }
+        ));
+        jScrollPane1.setViewportView(tblLeaveSummary);
+
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 177, 560, 410));
+
         getAccessibleContext().setAccessibleName("pnlLeaveSummary");
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> cmbLeaveMonth;
+    private com.toedter.calendar.JDateChooser dateLeaveFrom;
+    private com.toedter.calendar.JDateChooser dateLeaveReqDate;
+    private com.toedter.calendar.JDateChooser dateLeaveTo;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable tblLeaveSummary;
     // End of variables declaration//GEN-END:variables
 }
