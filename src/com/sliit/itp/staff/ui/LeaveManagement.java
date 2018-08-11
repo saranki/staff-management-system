@@ -6,6 +6,7 @@
 package com.sliit.itp.staff.ui;
 
 import com.sliit.itp.staff.ui.panel.ApplyLeave;
+import com.sliit.itp.staff.ui.panel.ApproveLeave;
 import com.sliit.itp.staff.ui.panel.LeaveSummary;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
@@ -18,7 +19,7 @@ public class LeaveManagement extends javax.swing.JFrame {
     GridBagLayout gridBaglayout = new GridBagLayout();
     ApplyLeave applyLeave;
     LeaveSummary leaveSummary;
-    
+    ApproveLeave approveLeave;   
     /**
      * Creates new form LeaveManagement
      */
@@ -26,18 +27,26 @@ public class LeaveManagement extends javax.swing.JFrame {
         initComponents();
         applyLeave = new ApplyLeave();
         leaveSummary = new LeaveSummary();
+        approveLeave = new ApproveLeave();
         DynamicPanel.setLayout(gridBaglayout);
         
         GridBagConstraints constraints = new GridBagConstraints();
+        
         constraints.gridx = 0;
         constraints.gridy = 0;
         DynamicPanel.add(applyLeave, constraints);
+        
         constraints.gridx = 0;
         constraints.gridy = 0;
         DynamicPanel.add(leaveSummary, constraints);
         
+        constraints.gridx = 0;
+        constraints.gridy = 0;
+        DynamicPanel.add(approveLeave, constraints);
+        
         applyLeave.setVisible(true);
         leaveSummary.setVisible(false);
+        approveLeave.setVisible(false);
     }
 
     /**
@@ -56,13 +65,14 @@ public class LeaveManagement extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
+        pnlApproveLeaveReq = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
         DynamicPanel = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(800, 600));
         setMinimumSize(new java.awt.Dimension(800, 600));
         setName("frLeave"); // NOI18N
-        setPreferredSize(new java.awt.Dimension(800, 600));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -71,22 +81,23 @@ public class LeaveManagement extends javax.swing.JFrame {
         jPanel1.setName("pnlLeave"); // NOI18N
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(0, 51, 0));
+        jPanel2.setBackground(new java.awt.Color(0, 102, 0));
         jPanel2.setName("pnlNavigation"); // NOI18N
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel3.setFont(new java.awt.Font("Segoe UI Light", 0, 20)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Segoe UI Light", 0, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("LEAVE DETAILS");
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, 140, 30));
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, 160, 30));
 
-        jPanel3.setBackground(new java.awt.Color(0, 97, 17));
+        jPanel3.setBackground(new java.awt.Color(51, 51, 51));
         jPanel3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jPanel3MouseClicked(evt);
             }
         });
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel4.setBackground(new java.awt.Color(0, 97, 17));
         jLabel4.setFont(new java.awt.Font("Segoe UI Light", 0, 16)); // NOI18N
@@ -98,29 +109,17 @@ public class LeaveManagement extends javax.swing.JFrame {
                 jLabel4MouseClicked(evt);
             }
         });
+        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 140, 40));
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel4)
-                .addContainerGap(106, Short.MAX_VALUE))
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
-        );
+        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 220, 50));
 
-        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 220, 40));
-
-        jPanel4.setBackground(new java.awt.Color(0, 97, 17));
+        jPanel4.setBackground(new java.awt.Color(51, 51, 51));
         jPanel4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jPanel4MouseClicked(evt);
             }
         });
+        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
         jLabel2.setFont(new java.awt.Font("Segoe UI Light", 0, 16)); // NOI18N
@@ -132,22 +131,25 @@ public class LeaveManagement extends javax.swing.JFrame {
                 jLabel2MouseClicked(evt);
             }
         });
+        jPanel4.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 162, 50));
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(48, Short.MAX_VALUE))
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE)
-        );
+        jPanel2.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 220, 50));
 
-        jPanel2.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 220, -1));
+        pnlApproveLeaveReq.setBackground(new java.awt.Color(51, 51, 51));
+        pnlApproveLeaveReq.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pnlApproveLeaveReqMouseClicked(evt);
+            }
+        });
+        pnlApproveLeaveReq.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI Light", 0, 16)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/icons8-ok-20.png"))); // NOI18N
+        jLabel1.setText("Leave Approval");
+        pnlApproveLeaveReq.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 160, 40));
+
+        jPanel2.add(pnlApproveLeaveReq, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 220, 50));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 220, 600));
         jPanel2.getAccessibleContext().setAccessibleName("pnlNavigation");
@@ -186,13 +188,22 @@ public class LeaveManagement extends javax.swing.JFrame {
         // TODO add your handling code here:
         applyLeave.setVisible(true);
         leaveSummary.setVisible(false);
+        approveLeave.setVisible(false);
     }//GEN-LAST:event_jPanel3MouseClicked
 
     private void jPanel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel4MouseClicked
         // TODO add your handling code here:
         leaveSummary.setVisible(true);
         applyLeave.setVisible(false);
+        approveLeave.setVisible(false);
     }//GEN-LAST:event_jPanel4MouseClicked
+
+    private void pnlApproveLeaveReqMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlApproveLeaveReqMouseClicked
+        // TODO add your handling code here:
+        approveLeave.setVisible(true);
+        leaveSummary.setVisible(false);
+        applyLeave.setVisible(false);
+    }//GEN-LAST:event_pnlApproveLeaveReqMouseClicked
 
     /**
      * @param args the command line arguments
@@ -231,6 +242,7 @@ public class LeaveManagement extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel DynamicPanel;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -238,5 +250,6 @@ public class LeaveManagement extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel pnlApproveLeaveReq;
     // End of variables declaration//GEN-END:variables
 }
