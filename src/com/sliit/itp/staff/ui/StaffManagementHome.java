@@ -52,7 +52,6 @@ public class StaffManagementHome extends javax.swing.JFrame {
         setMaximumSize(new java.awt.Dimension(790, 510));
         setMinimumSize(new java.awt.Dimension(790, 510));
         setName("frHome"); // NOI18N
-        setPreferredSize(new java.awt.Dimension(790, 510));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -73,7 +72,6 @@ public class StaffManagementHome extends javax.swing.JFrame {
         jLabel2.setText("EXIT SYSTEM");
         jLabel2.setName("lblMarkAttendance"); // NOI18N
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, -1, -1));
-        jLabel2.getAccessibleContext().setAccessibleName("EXIT SYSTEM");
 
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/exit.png"))); // NOI18N
