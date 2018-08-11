@@ -59,7 +59,7 @@ public class StaffDetails extends javax.swing.JFrame {
         jPanel1.setMinimumSize(new java.awt.Dimension(800, 600));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(0, 51, 0));
+        jPanel2.setBackground(new java.awt.Color(99, 0, 50));
         jPanel2.setMaximumSize(new java.awt.Dimension(220, 600));
         jPanel2.setMinimumSize(new java.awt.Dimension(220, 600));
         jPanel2.setPreferredSize(new java.awt.Dimension(220, 600));
@@ -69,9 +69,9 @@ public class StaffDetails extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Segoe UI Light", 0, 20)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("EMPLOYEE DETAILS");
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 30, 170, 40));
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 170, 40));
 
-        pnlAddEmployee.setBackground(new java.awt.Color(0, 97, 17));
+        pnlAddEmployee.setBackground(new java.awt.Color(64, 0, 33));
         pnlAddEmployee.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         pnlAddEmployee.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         pnlAddEmployee.setPreferredSize(new java.awt.Dimension(190, 41));
@@ -89,9 +89,9 @@ public class StaffDetails extends javax.swing.JFrame {
         jLabel4.setText("Add Employee");
         pnlAddEmployee.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, 41));
 
-        jPanel2.add(pnlAddEmployee, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 220, -1));
+        jPanel2.add(pnlAddEmployee, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 220, -1));
 
-        pnlUserDetails.setBackground(new java.awt.Color(0, 97, 17));
+        pnlUserDetails.setBackground(new java.awt.Color(64, 0, 33));
         pnlUserDetails.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         pnlUserDetails.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         pnlUserDetails.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -108,9 +108,9 @@ public class StaffDetails extends javax.swing.JFrame {
         jLabel2.setText("User Details");
         pnlUserDetails.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 162, 41));
 
-        jPanel2.add(pnlUserDetails, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 220, -1));
+        jPanel2.add(pnlUserDetails, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, 220, -1));
 
-        pnlExit.setBackground(new java.awt.Color(0, 97, 17));
+        pnlExit.setBackground(new java.awt.Color(64, 0, 33));
         pnlExit.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         pnlExit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         pnlExit.setPreferredSize(new java.awt.Dimension(220, 41));

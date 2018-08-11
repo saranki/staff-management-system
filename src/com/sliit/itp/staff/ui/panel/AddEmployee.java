@@ -53,6 +53,8 @@ public class AddEmployee extends javax.swing.JPanel {
         lblImage = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setMaximumSize(new java.awt.Dimension(580, 600));
@@ -62,7 +64,7 @@ public class AddEmployee extends javax.swing.JPanel {
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel1.setText("Staff Id");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 100, 30));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 100, 30));
 
         txtStaffId.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         txtStaffId.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -71,11 +73,11 @@ public class AddEmployee extends javax.swing.JPanel {
                 txtStaffIdActionPerformed(evt);
             }
         });
-        add(txtStaffId, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 20, 220, 30));
+        add(txtStaffId, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 90, 220, 30));
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel6.setText("First Name");
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 100, 30));
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 100, 30));
 
         txtFName.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         txtFName.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -84,11 +86,11 @@ public class AddEmployee extends javax.swing.JPanel {
                 txtFNameActionPerformed(evt);
             }
         });
-        add(txtFName, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 220, 30));
+        add(txtFName, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 130, 220, 30));
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel7.setText("Last Name");
-        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 100, 30));
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 100, 30));
 
         txtLName.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         txtLName.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -97,19 +99,19 @@ public class AddEmployee extends javax.swing.JPanel {
                 txtLNameActionPerformed(evt);
             }
         });
-        add(txtLName, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 100, 220, 30));
+        add(txtLName, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 170, 220, 30));
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel8.setText("Gender");
-        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 100, 30));
+        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, 100, 30));
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel9.setText("Designation");
-        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, 100, 30));
+        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, 100, 30));
 
         jLabel10.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel10.setText("Phone Number 1");
-        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 100, 30));
+        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 100, 30));
 
         txtPhone1.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         txtPhone1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -118,11 +120,11 @@ public class AddEmployee extends javax.swing.JPanel {
                 txtPhone1ActionPerformed(evt);
             }
         });
-        add(txtPhone1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 260, 220, 30));
+        add(txtPhone1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 330, 220, 30));
 
         jLabel11.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel11.setText("Phone Number 2");
-        add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 100, 30));
+        add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 370, 100, 30));
 
         txtPhone2.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         txtPhone2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -131,11 +133,11 @@ public class AddEmployee extends javax.swing.JPanel {
                 txtPhone2ActionPerformed(evt);
             }
         });
-        add(txtPhone2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 300, 220, 30));
+        add(txtPhone2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 370, 220, 30));
 
         jLabel12.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel12.setText("Email Address");
-        add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 100, 30));
+        add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, 100, 30));
 
         txtEmail.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         txtEmail.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -144,11 +146,11 @@ public class AddEmployee extends javax.swing.JPanel {
                 txtEmailActionPerformed(evt);
             }
         });
-        add(txtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 340, 220, 30));
+        add(txtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 410, 220, 30));
 
         jLabel13.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel13.setText("Date of Birth");
-        add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 100, 30));
+        add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 100, 30));
 
         rbFemale.setBackground(new java.awt.Color(255, 255, 255));
         rbFemale.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
@@ -159,7 +161,7 @@ public class AddEmployee extends javax.swing.JPanel {
                 rbFemaleActionPerformed(evt);
             }
         });
-        add(rbFemale, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 180, -1, -1));
+        add(rbFemale, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 250, -1, -1));
 
         rbMale.setBackground(new java.awt.Color(255, 255, 255));
         rbMale.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
@@ -170,18 +172,21 @@ public class AddEmployee extends javax.swing.JPanel {
                 rbMaleActionPerformed(evt);
             }
         });
-        add(rbMale, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 180, -1, -1));
+        add(rbMale, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 250, -1, -1));
 
         calDateOfBirth.setBackground(new java.awt.Color(255, 255, 255));
         calDateOfBirth.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
-        add(calDateOfBirth, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 140, 220, 30));
+        add(calDateOfBirth, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 210, 220, 30));
 
         cmbDesignation.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         cmbDesignation.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Please Select", "Item 2", "Item 3", "Item 4" }));
         cmbDesignation.setBorder(null);
-        add(cmbDesignation, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 220, 220, 30));
+        add(cmbDesignation, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 290, 220, 30));
+
+        jPanel1.setBackground(new java.awt.Color(128, 3, 67));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("ADD");
         jLabel2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jLabel2.setVerifyInputWhenFocusTarget(false);
@@ -200,9 +205,12 @@ public class AddEmployee extends javax.swing.JPanel {
             .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
         );
 
-        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 390, 100, 40));
+        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 460, 100, 40));
+
+        jPanel2.setBackground(new java.awt.Color(128, 3, 67));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("RESET");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -218,14 +226,17 @@ public class AddEmployee extends javax.swing.JPanel {
             .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
         );
 
-        add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 390, 100, 40));
+        add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 460, 100, 40));
 
         lblImage.setText("Upload Image Here");
         lblImage.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         lblImage.setPreferredSize(new java.awt.Dimension(150, 150));
-        add(lblImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 20, -1, -1));
+        add(lblImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 90, -1, -1));
+
+        jPanel3.setBackground(new java.awt.Color(128, 3, 67));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("BROWSE");
         jLabel4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jLabel4.setVerifyInputWhenFocusTarget(false);
@@ -244,7 +255,19 @@ public class AddEmployee extends javax.swing.JPanel {
             .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
         );
 
-        add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 180, 110, -1));
+        add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 250, 110, -1));
+
+        jPanel4.setBackground(new java.awt.Color(64, 0, 33));
+        jPanel4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel5.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel5.setFont(new java.awt.Font("Segoe UI Light", 0, 20)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("ADD EMPLOYEE");
+        jPanel4.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 250, 50));
+
+        add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 660, 70));
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtStaffIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtStaffIdActionPerformed
@@ -291,6 +314,7 @@ public class AddEmployee extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
@@ -298,6 +322,7 @@ public class AddEmployee extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JLabel lblImage;
     private javax.swing.JRadioButton rbFemale;
     private javax.swing.JRadioButton rbMale;
