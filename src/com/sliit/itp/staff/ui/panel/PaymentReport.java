@@ -59,7 +59,7 @@ public class PaymentReport extends javax.swing.JPanel {
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
-        jLabel1.setText("Search");
+        jLabel1.setText("Employee ID");
         jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 100, 30));
 
         jPanel1.setBackground(new java.awt.Color(128, 3, 67));
@@ -115,7 +115,7 @@ public class PaymentReport extends javax.swing.JPanel {
         jLabel5.setBackground(new java.awt.Color(255, 255, 255));
         jLabel5.setFont(new java.awt.Font("Segoe UI Light", 0, 20)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("GENERATE SALAY REPORTS");
+        jLabel5.setText("GENERATE SALARY REPORTS");
         jPanel5.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 250, 50));
 
         jPanel2.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 660, 70));

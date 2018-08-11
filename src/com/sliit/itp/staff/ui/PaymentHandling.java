@@ -142,7 +142,7 @@ public class PaymentHandling extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void pnlPayslipMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlPayslipMouseClicked
-        // TODO add your handling code here:
+        paymentReport.setVisible(false);
         payslip.setVisible(true);
     }//GEN-LAST:event_pnlPayslipMouseClicked
 

@@ -147,7 +147,7 @@ public class StaffDetails extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void pnlAddEmployeeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlAddEmployeeMouseClicked
-        // TODO add your handling code here:
+        userDetails.setVisible(false);
         addEmployee.setVisible(true);
     }//GEN-LAST:event_pnlAddEmployeeMouseClicked
 
