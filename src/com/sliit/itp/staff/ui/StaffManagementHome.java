@@ -31,7 +31,7 @@ public class StaffManagementHome extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
+        pnlStaffDetails = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
@@ -52,7 +52,6 @@ public class StaffManagementHome extends javax.swing.JFrame {
         setMaximumSize(new java.awt.Dimension(790, 510));
         setMinimumSize(new java.awt.Dimension(790, 510));
         setName("frHome"); // NOI18N
-        setPreferredSize(new java.awt.Dimension(790, 510));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -73,7 +72,6 @@ public class StaffManagementHome extends javax.swing.JFrame {
         jLabel2.setText("EXIT SYSTEM");
         jLabel2.setName("lblMarkAttendance"); // NOI18N
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, -1, -1));
-        jLabel2.getAccessibleContext().setAccessibleName("EXIT SYSTEM");
 
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/exit.png"))); // NOI18N
@@ -82,25 +80,30 @@ public class StaffManagementHome extends javax.swing.JFrame {
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 290, -1, -1));
 
-        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        jPanel3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel3.setName("pnlStaffDetails"); // NOI18N
-        jPanel3.setPreferredSize(new java.awt.Dimension(230, 200));
-        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        pnlStaffDetails.setBackground(new java.awt.Color(255, 255, 255));
+        pnlStaffDetails.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        pnlStaffDetails.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        pnlStaffDetails.setName("pnlStaffDetails"); // NOI18N
+        pnlStaffDetails.setPreferredSize(new java.awt.Dimension(230, 200));
+        pnlStaffDetails.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pnlStaffDetailsMouseClicked(evt);
+            }
+        });
+        pnlStaffDetails.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/employee.png"))); // NOI18N
         jLabel9.setDisabledIcon(null);
         jLabel9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, -1, -1));
+        pnlStaffDetails.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI Light", 0, 20)); // NOI18N
         jLabel3.setText("STAFF DETAILS");
         jLabel3.setName("lblStaffDetails"); // NOI18N
-        jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, -1, -1));
+        pnlStaffDetails.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, -1, -1));
 
-        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, -1, -1));
+        jPanel1.add(pnlStaffDetails, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, -1, -1));
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
         jPanel4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -200,6 +203,12 @@ public class StaffManagementHome extends javax.swing.JFrame {
         this.hide();
     }//GEN-LAST:event_jPanel5MouseClicked
 
+    private void pnlStaffDetailsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlStaffDetailsMouseClicked
+        StaffDetails staffDetails = new StaffDetails();
+        staffDetails.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_pnlStaffDetailsMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -251,10 +260,10 @@ public class StaffManagementHome extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel pnlStaffDetails;
     // End of variables declaration//GEN-END:variables
 }
