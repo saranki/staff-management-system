@@ -50,6 +50,7 @@ public class StaffDetails extends javax.swing.JFrame {
         pnlDynamic = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Staff Details");
         setMaximumSize(new java.awt.Dimension(800, 600));
         setMinimumSize(new java.awt.Dimension(800, 600));
         setResizable(false);
@@ -68,8 +69,8 @@ public class StaffDetails extends javax.swing.JFrame {
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
         jLabel3.setFont(new java.awt.Font("Segoe UI Light", 0, 20)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("EMPLOYEE DETAILS");
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 170, 40));
+        jLabel3.setText("STAFF DETAILS");
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, 130, 40));
 
         pnlAddEmployee.setBackground(new java.awt.Color(64, 0, 33));
         pnlAddEmployee.setBorder(javax.swing.BorderFactory.createEtchedBorder());
