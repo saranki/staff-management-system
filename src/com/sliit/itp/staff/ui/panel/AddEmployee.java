@@ -175,6 +175,7 @@ public class AddEmployee extends javax.swing.JPanel {
         add(rbMale, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 250, -1, -1));
 
         calDateOfBirth.setBackground(new java.awt.Color(255, 255, 255));
+        calDateOfBirth.setDateFormatString("dd-MM-yyyy");
         calDateOfBirth.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         add(calDateOfBirth, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 210, 220, 30));
 

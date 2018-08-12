@@ -27,8 +27,6 @@ public class LeaveSummary extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        tblLeaveSummary = new javax.swing.JTable();
         pnlLeaveSummary = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         lblMonth = new javax.swing.JLabel();
@@ -39,6 +37,12 @@ public class LeaveSummary extends javax.swing.JPanel {
         dateLeaveTo = new com.toedter.calendar.JDateChooser();
         jLabel6 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tblLeaveSummary = new javax.swing.JTable();
+        btnReset = new javax.swing.JPanel();
+        lblReset = new javax.swing.JLabel();
+        btnSearch1 = new javax.swing.JPanel();
+        lblSearch1 = new javax.swing.JLabel();
         pnlApprove = new javax.swing.JPanel();
         lblLeaveSummaryTitle = new javax.swing.JLabel();
 
@@ -48,23 +52,6 @@ public class LeaveSummary extends javax.swing.JPanel {
         setName("pnlLeaveSummary"); // NOI18N
         setPreferredSize(new java.awt.Dimension(580, 600));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        tblLeaveSummary.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
-        tblLeaveSummary.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "FROM", "TO", "LEAVE TYPE", "DURATION"
-            }
-        ));
-        tblLeaveSummary.setPreferredSize(new java.awt.Dimension(300, 80));
-        jScrollPane1.setViewportView(tblLeaveSummary);
-
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 540, 110));
 
         pnlLeaveSummary.setBackground(new java.awt.Color(255, 255, 255));
         pnlLeaveSummary.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -88,16 +75,19 @@ public class LeaveSummary extends javax.swing.JPanel {
         pnlLeaveSummary.add(cmbLeaveMonth, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 34, 190, 30));
 
         dateLeaveFrom.setDateFormatString("dd-MM-yyyy");
+        dateLeaveFrom.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         dateLeaveFrom.setMaximumSize(new java.awt.Dimension(95, 24));
         dateLeaveFrom.setMinimumSize(new java.awt.Dimension(95, 24));
         pnlLeaveSummary.add(dateLeaveFrom, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 70, 190, 30));
 
         dateLeaveReqDate.setDateFormatString("dd-MM-yyyy");
+        dateLeaveReqDate.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         dateLeaveReqDate.setMaximumSize(new java.awt.Dimension(95, 24));
         dateLeaveReqDate.setMinimumSize(new java.awt.Dimension(95, 24));
         pnlLeaveSummary.add(dateLeaveReqDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 34, 190, 30));
 
         dateLeaveTo.setDateFormatString("dd-MM-yyyy");
+        dateLeaveTo.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         dateLeaveTo.setMaximumSize(new java.awt.Dimension(95, 24));
         dateLeaveTo.setMinimumSize(new java.awt.Dimension(95, 24));
         pnlLeaveSummary.add(dateLeaveTo, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 70, 190, 30));
@@ -110,7 +100,44 @@ public class LeaveSummary extends javax.swing.JPanel {
         jLabel4.setText("Date");
         pnlLeaveSummary.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 34, -1, 30));
 
-        add(pnlLeaveSummary, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 580, 120));
+        tblLeaveSummary.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+        tblLeaveSummary.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "FROM", "TO", "LEAVE TYPE", "DURATION"
+            }
+        ));
+        tblLeaveSummary.setPreferredSize(new java.awt.Dimension(300, 80));
+        jScrollPane1.setViewportView(tblLeaveSummary);
+
+        pnlLeaveSummary.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 540, 110));
+
+        btnReset.setBackground(new java.awt.Color(128, 3, 67));
+        btnReset.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        lblReset.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
+        lblReset.setForeground(new java.awt.Color(255, 255, 255));
+        lblReset.setText("RESET");
+        btnReset.add(lblReset, new org.netbeans.lib.awtextra.AbsoluteConstraints(32, 12, -1, -1));
+
+        pnlLeaveSummary.add(btnReset, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 120, 100, 40));
+
+        btnSearch1.setBackground(new java.awt.Color(128, 3, 67));
+        btnSearch1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        lblSearch1.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
+        lblSearch1.setForeground(new java.awt.Color(255, 255, 255));
+        lblSearch1.setText("SEARCH");
+        btnSearch1.add(lblSearch1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 12, -1, -1));
+
+        pnlLeaveSummary.add(btnSearch1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 120, 100, 40));
+
+        add(pnlLeaveSummary, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 580, 530));
 
         pnlApprove.setBackground(new java.awt.Color(64, 0, 33));
         pnlApprove.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -127,6 +154,8 @@ public class LeaveSummary extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel btnReset;
+    private javax.swing.JPanel btnSearch1;
     private javax.swing.JComboBox<String> cmbLeaveMonth;
     private com.toedter.calendar.JDateChooser dateLeaveFrom;
     private com.toedter.calendar.JDateChooser dateLeaveReqDate;
@@ -138,6 +167,8 @@ public class LeaveSummary extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblLeaveSummaryTitle;
     private javax.swing.JLabel lblMonth;
+    private javax.swing.JLabel lblReset;
+    private javax.swing.JLabel lblSearch1;
     private javax.swing.JPanel pnlApprove;
     private javax.swing.JPanel pnlLeaveSummary;
     private javax.swing.JTable tblLeaveSummary;

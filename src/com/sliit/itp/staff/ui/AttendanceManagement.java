@@ -57,24 +57,27 @@ public class AttendanceManagement extends javax.swing.JFrame {
         lblMarkAttendance = new javax.swing.JLabel();
         btnMarkAttendance1 = new javax.swing.JPanel();
         lblMarkAttendance1 = new javax.swing.JLabel();
+        pnlExit = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
         pnlDynamic = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         pnlAttendanceBase.setBackground(new java.awt.Color(255, 255, 255));
         pnlAttendanceBase.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        pnlAttendanceNav.setBackground(new java.awt.Color(0, 102, 0));
+        pnlAttendanceNav.setBackground(new java.awt.Color(99, 0, 50));
         pnlAttendanceNav.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblAttendanceTitle.setBackground(new java.awt.Color(255, 255, 255));
         lblAttendanceTitle.setFont(new java.awt.Font("Segoe UI Light", 0, 24)); // NOI18N
         lblAttendanceTitle.setForeground(new java.awt.Color(255, 255, 255));
         lblAttendanceTitle.setText("ATTENDANCE ");
-        pnlAttendanceNav.add(lblAttendanceTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, 160, 30));
+        pnlAttendanceNav.add(lblAttendanceTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 160, 30));
 
-        btnViewAttendance.setBackground(new java.awt.Color(51, 51, 51));
+        btnViewAttendance.setBackground(new java.awt.Color(64, 0, 33));
         btnViewAttendance.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         btnViewAttendance.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnViewAttendance.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -89,11 +92,11 @@ public class AttendanceManagement extends javax.swing.JFrame {
         lblMarkAttendance.setForeground(new java.awt.Color(255, 255, 255));
         lblMarkAttendance.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/icons8-data-sheet-20.png"))); // NOI18N
         lblMarkAttendance.setText("Attendance Summary");
-        btnViewAttendance.add(lblMarkAttendance, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 180, 30));
+        btnViewAttendance.add(lblMarkAttendance, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 180, 40));
 
-        pnlAttendanceNav.add(btnViewAttendance, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 220, 50));
+        pnlAttendanceNav.add(btnViewAttendance, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 220, 41));
 
-        btnMarkAttendance1.setBackground(new java.awt.Color(51, 51, 51));
+        btnMarkAttendance1.setBackground(new java.awt.Color(64, 0, 33));
         btnMarkAttendance1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         btnMarkAttendance1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnMarkAttendance1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -108,9 +111,30 @@ public class AttendanceManagement extends javax.swing.JFrame {
         lblMarkAttendance1.setForeground(new java.awt.Color(255, 255, 255));
         lblMarkAttendance1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/icons8-attendance-20.png"))); // NOI18N
         lblMarkAttendance1.setText("Mark Attendance");
-        btnMarkAttendance1.add(lblMarkAttendance1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 150, 30));
+        btnMarkAttendance1.add(lblMarkAttendance1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 150, 40));
 
-        pnlAttendanceNav.add(btnMarkAttendance1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 220, 50));
+        pnlAttendanceNav.add(btnMarkAttendance1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 220, 41));
+
+        pnlExit.setBackground(new java.awt.Color(64, 0, 33));
+        pnlExit.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        pnlExit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        pnlExit.setPreferredSize(new java.awt.Dimension(220, 41));
+        pnlExit.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pnlExitMouseClicked(evt);
+            }
+        });
+        pnlExit.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel5.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel5.setFont(new java.awt.Font("Segoe UI Light", 0, 16)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/icons8-exit-20.png"))); // NOI18N
+        jLabel5.setText("Exit Module");
+        jLabel5.setFocusable(false);
+        pnlExit.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 162, 41));
+
+        pnlAttendanceNav.add(pnlExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 560, 220, 40));
 
         pnlAttendanceBase.add(pnlAttendanceNav, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 220, 600));
 
@@ -132,6 +156,7 @@ public class AttendanceManagement extends javax.swing.JFrame {
         getContentPane().add(pnlAttendanceBase, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 600));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnMarkAttendance1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMarkAttendance1MouseClicked
@@ -143,6 +168,13 @@ public class AttendanceManagement extends javax.swing.JFrame {
         markAttendance.setVisible(false);
         viewAttendance.setVisible(true);
     }//GEN-LAST:event_btnViewAttendanceMouseClicked
+
+    private void pnlExitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlExitMouseClicked
+        // TODO add your handling code here:
+        StaffManagementHome staffHome = new StaffManagementHome();
+        staffHome.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_pnlExitMouseClicked
 
     /**
      * @param args the command line arguments
@@ -182,11 +214,13 @@ public class AttendanceManagement extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel btnMarkAttendance1;
     private javax.swing.JPanel btnViewAttendance;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel lblAttendanceTitle;
     private javax.swing.JLabel lblMarkAttendance;
     private javax.swing.JLabel lblMarkAttendance1;
     private javax.swing.JPanel pnlAttendanceBase;
     private javax.swing.JPanel pnlAttendanceNav;
     private javax.swing.JPanel pnlDynamic;
+    private javax.swing.JPanel pnlExit;
     // End of variables declaration//GEN-END:variables
 }

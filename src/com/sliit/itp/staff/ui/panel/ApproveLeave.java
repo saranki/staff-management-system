@@ -52,6 +52,8 @@ public class ApproveLeave extends javax.swing.JPanel {
         lblTo = new javax.swing.JLabel();
         cmbApprovalStatus = new javax.swing.JComboBox<>();
         jSeparator1 = new javax.swing.JSeparator();
+        btnReset = new javax.swing.JPanel();
+        lblReset = new javax.swing.JLabel();
         pnlLeaveSummary = new javax.swing.JPanel();
         lblMonth = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -129,7 +131,7 @@ public class ApproveLeave extends javax.swing.JPanel {
         jLabel15.setText("UPDATE");
         btnUpdate.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 12, -1, -1));
 
-        jPanel4.add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 210, 100, 40));
+        jPanel4.add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 210, 100, 40));
 
         lblStaffIdGet.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         lblStaffIdGet.setText("EMP0001");
@@ -164,9 +166,19 @@ public class ApproveLeave extends javax.swing.JPanel {
         jPanel4.add(lblTo, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 100, -1, 30));
 
         cmbApprovalStatus.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
-        cmbApprovalStatus.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "PENDING", "APPROVED", "DENIED" }));
+        cmbApprovalStatus.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pending", "Approved", "Denied" }));
         jPanel4.add(cmbApprovalStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 140, 160, 30));
         jPanel4.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 2, 560, 10));
+
+        btnReset.setBackground(new java.awt.Color(128, 3, 67));
+        btnReset.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        lblReset.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
+        lblReset.setForeground(new java.awt.Color(255, 255, 255));
+        lblReset.setText("RESET");
+        btnReset.add(lblReset, new org.netbeans.lib.awtextra.AbsoluteConstraints(32, 12, -1, -1));
+
+        jPanel4.add(btnReset, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 210, 100, 40));
 
         jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 320, 580, 260));
 
@@ -194,16 +206,19 @@ public class ApproveLeave extends javax.swing.JPanel {
         pnlLeaveSummary.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 69, 30, 30));
 
         dateLeaveReqDate.setDateFormatString("dd-MM-yyyy");
+        dateLeaveReqDate.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         dateLeaveReqDate.setMaximumSize(new java.awt.Dimension(95, 24));
         dateLeaveReqDate.setMinimumSize(new java.awt.Dimension(95, 24));
         pnlLeaveSummary.add(dateLeaveReqDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 34, 190, 30));
 
         dateLeaveFrom.setDateFormatString("dd-MM-yyyy");
+        dateLeaveFrom.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         dateLeaveFrom.setMaximumSize(new java.awt.Dimension(95, 24));
         dateLeaveFrom.setMinimumSize(new java.awt.Dimension(95, 24));
         pnlLeaveSummary.add(dateLeaveFrom, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 70, 190, 30));
 
         dateLeaveTo.setDateFormatString("dd-MM-yyyy");
+        dateLeaveTo.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         dateLeaveTo.setMaximumSize(new java.awt.Dimension(95, 24));
         dateLeaveTo.setMinimumSize(new java.awt.Dimension(95, 24));
         pnlLeaveSummary.add(dateLeaveTo, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 70, 190, 30));
@@ -240,6 +255,7 @@ public class ApproveLeave extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel btnReset;
     private javax.swing.JPanel btnUpdate;
     private javax.swing.JComboBox<String> cmbApprovalStatus;
     private javax.swing.JComboBox<String> cmbLeaveMonth;
@@ -272,6 +288,7 @@ public class ApproveLeave extends javax.swing.JPanel {
     private javax.swing.JLabel lblName;
     private javax.swing.JLabel lblReason;
     private javax.swing.JLabel lblReqDate;
+    private javax.swing.JLabel lblReset;
     private javax.swing.JLabel lblStaffIdGet;
     private javax.swing.JLabel lblTo;
     private javax.swing.JPanel pnlApprove;

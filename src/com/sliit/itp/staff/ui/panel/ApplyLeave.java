@@ -133,13 +133,19 @@ public class ApplyLeave extends javax.swing.JPanel {
         jPanel2.add(lblReqDateGet, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 65, 150, 30));
 
         cmbLeaveType.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
-        cmbLeaveType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select a leave type", "Casual Leave", "Sick Leave", "Paid Leave" }));
+        cmbLeaveType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Please Select", "Casual Leave", "Sick Leave", "Paid Leave" }));
         jPanel2.add(cmbLeaveType, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 105, 210, 30));
 
         cmbLeaveDuration.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
-        cmbLeaveDuration.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Duration", "Half Day", "Full Day" }));
+        cmbLeaveDuration.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Please Select", "Half Day", "Full Day" }));
         jPanel2.add(cmbLeaveDuration, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 145, 210, 30));
+
+        dateLeaveFrom.setDateFormatString("dd-MM-yyyy");
+        dateLeaveFrom.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jPanel2.add(dateLeaveFrom, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 185, 210, 30));
+
+        dateLeaveTo.setDateFormatString("dd-MM-yyyy");
+        dateLeaveTo.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jPanel2.add(dateLeaveTo, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 225, 210, 30));
 
         txtAreaLeaveReason.setColumns(20);
@@ -153,7 +159,7 @@ public class ApplyLeave extends javax.swing.JPanel {
         lblEmpIdGet.setText("EMP0001");
         jPanel2.add(lblEmpIdGet, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 25, 150, 30));
 
-        add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 580, 510));
+        add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 580, 530));
 
         getAccessibleContext().setAccessibleName("pnlApplyLeave");
     }// </editor-fold>//GEN-END:initComponents
