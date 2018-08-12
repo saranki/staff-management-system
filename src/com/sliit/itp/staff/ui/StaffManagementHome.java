@@ -167,6 +167,11 @@ public class StaffManagementHome extends javax.swing.JFrame {
         jPanel8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel8.setName("pnlMarkAttendance"); // NOI18N
         jPanel8.setPreferredSize(new java.awt.Dimension(230, 200));
+        jPanel8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel8MouseClicked(evt);
+            }
+        });
         jPanel8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel12.setFont(new java.awt.Font("Segoe UI Light", 0, 20)); // NOI18N
@@ -194,9 +199,17 @@ public class StaffManagementHome extends javax.swing.JFrame {
     // Open Leave Details UI
     private void jPanel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel5MouseClicked
         LeaveManagement leaveManagement = new LeaveManagement();
-        leaveManagement.show();
-        this.hide();
+        leaveManagement.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jPanel5MouseClicked
+
+    // Open Attendance UI
+    private void jPanel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel8MouseClicked
+       AttendanceManagement attendance = new AttendanceManagement();
+       attendance.setVisible(true);
+       this.setVisible(false);
+        
+    }//GEN-LAST:event_jPanel8MouseClicked
 
     /**
      * @param args the command line arguments
