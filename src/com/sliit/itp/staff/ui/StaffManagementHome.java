@@ -31,16 +31,16 @@ public class StaffManagementHome extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
+        pnlStaffDetails = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jPanel4 = new javax.swing.JPanel();
+        pnlPayroll = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        jPanel6 = new javax.swing.JPanel();
+        pnlWorkShift = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jPanel8 = new javax.swing.JPanel();
@@ -49,16 +49,19 @@ public class StaffManagementHome extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(790, 510));
-        setMinimumSize(new java.awt.Dimension(790, 510));
+        setTitle("Staff Management Dashboard");
+        setMaximumSize(new java.awt.Dimension(750, 540));
+        setMinimumSize(new java.awt.Dimension(750, 540));
         setName("frHome"); // NOI18N
+        setResizable(false);
+        setSize(new java.awt.Dimension(750, 540));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setMaximumSize(new java.awt.Dimension(790, 510));
-        jPanel1.setMinimumSize(new java.awt.Dimension(790, 510));
+        jPanel1.setMaximumSize(new java.awt.Dimension(750, 540));
+        jPanel1.setMinimumSize(new java.awt.Dimension(750, 540));
         jPanel1.setName("pnlDashboard"); // NOI18N
-        jPanel1.setPreferredSize(new java.awt.Dimension(790, 510));
+        jPanel1.setPreferredSize(new java.awt.Dimension(750, 540));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
@@ -66,6 +69,11 @@ public class StaffManagementHome extends javax.swing.JFrame {
         jPanel2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel2.setName("pnlMarkAttendance"); // NOI18N
         jPanel2.setPreferredSize(new java.awt.Dimension(230, 200));
+        jPanel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel2MouseClicked(evt);
+            }
+        });
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Segoe UI Light", 0, 20)); // NOI18N
@@ -78,46 +86,56 @@ public class StaffManagementHome extends javax.swing.JFrame {
         jLabel10.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, -1, -1));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 290, -1, -1));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 320, -1, -1));
 
-        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        jPanel3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel3.setName("pnlStaffDetails"); // NOI18N
-        jPanel3.setPreferredSize(new java.awt.Dimension(230, 200));
-        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        pnlStaffDetails.setBackground(new java.awt.Color(255, 255, 255));
+        pnlStaffDetails.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        pnlStaffDetails.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        pnlStaffDetails.setName("pnlStaffDetails"); // NOI18N
+        pnlStaffDetails.setPreferredSize(new java.awt.Dimension(230, 200));
+        pnlStaffDetails.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pnlStaffDetailsMouseClicked(evt);
+            }
+        });
+        pnlStaffDetails.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/employee.png"))); // NOI18N
         jLabel9.setDisabledIcon(null);
         jLabel9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, -1, -1));
+        pnlStaffDetails.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI Light", 0, 20)); // NOI18N
         jLabel3.setText("STAFF DETAILS");
         jLabel3.setName("lblStaffDetails"); // NOI18N
-        jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, -1, -1));
+        pnlStaffDetails.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, -1, -1));
 
-        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, -1, -1));
+        jPanel1.add(pnlStaffDetails, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, -1, -1));
 
-        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        jPanel4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel4.setName("pnlPayroll"); // NOI18N
-        jPanel4.setPreferredSize(new java.awt.Dimension(230, 200));
-        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        pnlPayroll.setBackground(new java.awt.Color(255, 255, 255));
+        pnlPayroll.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        pnlPayroll.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        pnlPayroll.setName("pnlPayroll"); // NOI18N
+        pnlPayroll.setPreferredSize(new java.awt.Dimension(230, 200));
+        pnlPayroll.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pnlPayrollMouseClicked(evt);
+            }
+        });
+        pnlPayroll.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel6.setFont(new java.awt.Font("Segoe UI Light", 0, 20)); // NOI18N
         jLabel6.setText("PAYROLL");
         jLabel6.setName("lblPayroll"); // NOI18N
-        jPanel4.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, -1, -1));
+        pnlPayroll.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, -1, -1));
 
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/money.png"))); // NOI18N
         jLabel8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel4.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, -1, -1));
+        pnlPayroll.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, -1, -1));
 
-        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, -1, -1));
+        jPanel1.add(pnlPayroll, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, -1, -1));
 
         jPanel5.setBackground(new java.awt.Color(255, 255, 255));
         jPanel5.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -141,26 +159,31 @@ public class StaffManagementHome extends javax.swing.JFrame {
         jLabel11.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanel5.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, -1, -1));
 
-        jPanel1.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 80, -1, -1));
+        jPanel1.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 110, -1, -1));
 
-        jPanel6.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel6.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        jPanel6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel6.setName("pnlShift"); // NOI18N
-        jPanel6.setPreferredSize(new java.awt.Dimension(230, 200));
-        jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        pnlWorkShift.setBackground(new java.awt.Color(255, 255, 255));
+        pnlWorkShift.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        pnlWorkShift.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        pnlWorkShift.setName("pnlShift"); // NOI18N
+        pnlWorkShift.setPreferredSize(new java.awt.Dimension(230, 200));
+        pnlWorkShift.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pnlWorkShiftMouseClicked(evt);
+            }
+        });
+        pnlWorkShift.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel5.setFont(new java.awt.Font("Segoe UI Light", 0, 20)); // NOI18N
         jLabel5.setText("WORK SHIFT");
         jLabel5.setName("lblShift"); // NOI18N
-        jPanel6.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, -1, -1));
+        pnlWorkShift.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, -1, -1));
 
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/clock.png"))); // NOI18N
         jLabel13.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel6.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, -1, -1));
+        pnlWorkShift.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, -1, -1));
 
-        jPanel1.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 290, -1, -1));
+        jPanel1.add(pnlWorkShift, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 320, -1, -1));
 
         jPanel8.setBackground(new java.awt.Color(255, 255, 255));
         jPanel8.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -184,32 +207,55 @@ public class StaffManagementHome extends javax.swing.JFrame {
         jLabel14.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanel8.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, -1, -1));
 
-        jPanel1.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 80, -1, -1));
+        jPanel1.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 110, -1, -1));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Light", 0, 36)); // NOI18N
         jLabel1.setText("STAFF MANAGEMENT SYSTEM");
         jLabel1.setName("lblStaffDetails"); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 500, 50));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 470, 80));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        setSize(new java.awt.Dimension(804, 549));
+        pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
     // Open Leave Details UI
     private void jPanel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel5MouseClicked
         LeaveManagement leaveManagement = new LeaveManagement();
         leaveManagement.setVisible(true);
-        this.setVisible(false);
+        this.dispose();
     }//GEN-LAST:event_jPanel5MouseClicked
 
     // Open Attendance UI
     private void jPanel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel8MouseClicked
        AttendanceManagement attendance = new AttendanceManagement();
        attendance.setVisible(true);
-       this.setVisible(false);
-        
+       this.dispose();
     }//GEN-LAST:event_jPanel8MouseClicked
+
+    private void pnlStaffDetailsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlStaffDetailsMouseClicked
+        StaffDetails staffDetails = new StaffDetails();
+        staffDetails.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_pnlStaffDetailsMouseClicked
+
+    private void jPanel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MouseClicked
+        // this.dispose();
+        System.exit(0);
+    }//GEN-LAST:event_jPanel2MouseClicked
+
+    private void pnlPayrollMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlPayrollMouseClicked
+        PaymentHandling payroll = new PaymentHandling();
+        payroll.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_pnlPayrollMouseClicked
+
+    private void pnlWorkShiftMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlWorkShiftMouseClicked
+        ShiftHandling shiftHandling = new ShiftHandling();
+        shiftHandling.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_pnlWorkShiftMouseClicked
+
 
     /**
      * @param args the command line arguments
@@ -262,10 +308,10 @@ public class StaffManagementHome extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel pnlPayroll;
+    private javax.swing.JPanel pnlStaffDetails;
+    private javax.swing.JPanel pnlWorkShift;
     // End of variables declaration//GEN-END:variables
 }
