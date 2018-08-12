@@ -60,7 +60,7 @@ public class LeaveManagement extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
+        lblLeaveTitle = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
@@ -85,13 +85,15 @@ public class LeaveManagement extends javax.swing.JFrame {
         jPanel2.setName("pnlNavigation"); // NOI18N
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel3.setFont(new java.awt.Font("Segoe UI Light", 0, 24)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("LEAVE DETAILS");
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, 160, 30));
+        lblLeaveTitle.setBackground(new java.awt.Color(255, 255, 255));
+        lblLeaveTitle.setFont(new java.awt.Font("Segoe UI Light", 0, 24)); // NOI18N
+        lblLeaveTitle.setForeground(new java.awt.Color(255, 255, 255));
+        lblLeaveTitle.setText("LEAVE DETAILS");
+        jPanel2.add(lblLeaveTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, 160, 30));
 
         jPanel3.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jPanel3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jPanel3MouseClicked(evt);
@@ -104,16 +106,13 @@ public class LeaveManagement extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/icons8-timer-20.png"))); // NOI18N
         jLabel4.setText("Apply Leave");
-        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel4MouseClicked(evt);
-            }
-        });
         jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 140, 40));
 
         jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 220, 50));
 
         jPanel4.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jPanel4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jPanel4MouseClicked(evt);
@@ -126,16 +125,13 @@ public class LeaveManagement extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/icons8-details-20.png"))); // NOI18N
         jLabel2.setText("Leave Summary");
-        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel2MouseClicked(evt);
-            }
-        });
         jPanel4.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 162, 50));
 
-        jPanel2.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 220, 50));
+        jPanel2.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 220, 50));
 
         pnlApproveLeaveReq.setBackground(new java.awt.Color(51, 51, 51));
+        pnlApproveLeaveReq.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        pnlApproveLeaveReq.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         pnlApproveLeaveReq.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 pnlApproveLeaveReqMouseClicked(evt);
@@ -149,7 +145,7 @@ public class LeaveManagement extends javax.swing.JFrame {
         jLabel1.setText("Leave Approval");
         pnlApproveLeaveReq.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 160, 40));
 
-        jPanel2.add(pnlApproveLeaveReq, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 220, 50));
+        jPanel2.add(pnlApproveLeaveReq, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 220, 50));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 220, 600));
         jPanel2.getAccessibleContext().setAccessibleName("pnlNavigation");
@@ -175,15 +171,7 @@ public class LeaveManagement extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    
-    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel2MouseClicked
-
-    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel4MouseClicked
-    //Apply Leave 
+        //Apply Leave 
     private void jPanel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel3MouseClicked
         // TODO add your handling code here:
         applyLeave.setVisible(true);
@@ -244,12 +232,12 @@ public class LeaveManagement extends javax.swing.JFrame {
     private javax.swing.JPanel DynamicPanel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JLabel lblLeaveTitle;
     private javax.swing.JPanel pnlApproveLeaveReq;
     // End of variables declaration//GEN-END:variables
 }
