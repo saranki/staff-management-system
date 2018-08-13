@@ -8,6 +8,7 @@ package com.sliit.itp.staff.ui;
 import com.sliit.itp.staff.ui.panel.ApplyLeave;
 import com.sliit.itp.staff.ui.panel.ApproveLeave;
 import com.sliit.itp.staff.ui.panel.LeaveSummary;
+import java.awt.Color;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 
@@ -16,10 +17,12 @@ import java.awt.GridBagLayout;
  * @author user
  */
 public class LeaveManagement extends javax.swing.JFrame {
+
     GridBagLayout gridBaglayout = new GridBagLayout();
     ApplyLeave applyLeave;
     LeaveSummary leaveSummary;
-    ApproveLeave approveLeave;   
+    ApproveLeave approveLeave;
+
     /**
      * Creates new form LeaveManagement
      */
@@ -29,21 +32,21 @@ public class LeaveManagement extends javax.swing.JFrame {
         leaveSummary = new LeaveSummary();
         approveLeave = new ApproveLeave();
         DynamicPanel.setLayout(gridBaglayout);
-        
+
         GridBagConstraints constraints = new GridBagConstraints();
-        
+
         constraints.gridx = 0;
         constraints.gridy = 0;
         DynamicPanel.add(applyLeave, constraints);
-        
+
         constraints.gridx = 0;
         constraints.gridy = 0;
         DynamicPanel.add(leaveSummary, constraints);
-        
+
         constraints.gridx = 0;
         constraints.gridy = 0;
         DynamicPanel.add(approveLeave, constraints);
-        
+
         applyLeave.setVisible(true);
         leaveSummary.setVisible(false);
         approveLeave.setVisible(false);
@@ -61,11 +64,11 @@ public class LeaveManagement extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         lblLeaveTitle = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
+        pnlApplyLeave = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
-        jPanel4 = new javax.swing.JPanel();
+        pnlLeaveSummary = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        pnlApproveLeaveReq = new javax.swing.JPanel();
+        pnlLeaveApproval = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         pnlExit = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
@@ -95,64 +98,100 @@ public class LeaveManagement extends javax.swing.JFrame {
         lblLeaveTitle.setText("LEAVE DETAILS");
         jPanel2.add(lblLeaveTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 160, 30));
 
-        jPanel3.setBackground(new java.awt.Color(64, 0, 33));
-        jPanel3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        jPanel3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel3.setPreferredSize(new java.awt.Dimension(150, 41));
-        jPanel3.addMouseListener(new java.awt.event.MouseAdapter() {
+        pnlApplyLeave.setBackground(new java.awt.Color(64, 0, 33));
+        pnlApplyLeave.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        pnlApplyLeave.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        pnlApplyLeave.setPreferredSize(new java.awt.Dimension(150, 41));
+        pnlApplyLeave.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jPanel3MouseClicked(evt);
+                pnlApplyLeaveMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                pnlApplyLeaveMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                pnlApplyLeaveMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                pnlApplyLeaveMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                pnlApplyLeaveMouseReleased(evt);
             }
         });
-        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        pnlApplyLeave.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel4.setBackground(new java.awt.Color(0, 97, 17));
         jLabel4.setFont(new java.awt.Font("Segoe UI Light", 0, 16)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/icons8-timer-20.png"))); // NOI18N
         jLabel4.setText("Apply Leave");
-        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 140, 41));
+        pnlApplyLeave.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 140, 41));
 
-        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 220, 41));
+        jPanel2.add(pnlApplyLeave, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 220, 41));
 
-        jPanel4.setBackground(new java.awt.Color(64, 0, 33));
-        jPanel4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        jPanel4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel4.setPreferredSize(new java.awt.Dimension(172, 41));
-        jPanel4.addMouseListener(new java.awt.event.MouseAdapter() {
+        pnlLeaveSummary.setBackground(new java.awt.Color(64, 0, 33));
+        pnlLeaveSummary.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        pnlLeaveSummary.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        pnlLeaveSummary.setPreferredSize(new java.awt.Dimension(172, 41));
+        pnlLeaveSummary.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jPanel4MouseClicked(evt);
+                pnlLeaveSummaryMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                pnlLeaveSummaryMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                pnlLeaveSummaryMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                pnlLeaveSummaryMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                pnlLeaveSummaryMouseReleased(evt);
             }
         });
-        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        pnlLeaveSummary.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
         jLabel2.setFont(new java.awt.Font("Segoe UI Light", 0, 16)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/icons8-details-20.png"))); // NOI18N
         jLabel2.setText("Leave Summary");
-        jPanel4.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 162, 40));
+        pnlLeaveSummary.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 162, 40));
 
-        jPanel2.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 220, 41));
+        jPanel2.add(pnlLeaveSummary, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 220, 41));
 
-        pnlApproveLeaveReq.setBackground(new java.awt.Color(64, 0, 33));
-        pnlApproveLeaveReq.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        pnlApproveLeaveReq.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        pnlApproveLeaveReq.setPreferredSize(new java.awt.Dimension(170, 41));
-        pnlApproveLeaveReq.addMouseListener(new java.awt.event.MouseAdapter() {
+        pnlLeaveApproval.setBackground(new java.awt.Color(64, 0, 33));
+        pnlLeaveApproval.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        pnlLeaveApproval.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        pnlLeaveApproval.setPreferredSize(new java.awt.Dimension(170, 41));
+        pnlLeaveApproval.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                pnlApproveLeaveReqMouseClicked(evt);
+                pnlLeaveApprovalMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                pnlLeaveApprovalMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                pnlLeaveApprovalMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                pnlLeaveApprovalMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                pnlLeaveApprovalMouseReleased(evt);
             }
         });
-        pnlApproveLeaveReq.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        pnlLeaveApproval.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Light", 0, 16)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/icons8-ok-20.png"))); // NOI18N
         jLabel1.setText("Leave Approval");
-        pnlApproveLeaveReq.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 160, 40));
+        pnlLeaveApproval.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 160, 40));
 
-        jPanel2.add(pnlApproveLeaveReq, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 220, 41));
+        jPanel2.add(pnlLeaveApproval, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 220, 41));
 
         pnlExit.setBackground(new java.awt.Color(64, 0, 33));
         pnlExit.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -161,6 +200,18 @@ public class LeaveManagement extends javax.swing.JFrame {
         pnlExit.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 pnlExitMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                pnlExitMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                pnlExitMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                pnlExitMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                pnlExitMouseReleased(evt);
             }
         });
         pnlExit.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -200,27 +251,27 @@ public class LeaveManagement extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-        //Apply Leave 
-    private void jPanel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel3MouseClicked
+    //Apply Leave 
+    private void pnlApplyLeaveMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlApplyLeaveMouseClicked
         // TODO add your handling code here:
         applyLeave.setVisible(true);
         leaveSummary.setVisible(false);
         approveLeave.setVisible(false);
-    }//GEN-LAST:event_jPanel3MouseClicked
+    }//GEN-LAST:event_pnlApplyLeaveMouseClicked
 
-    private void jPanel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel4MouseClicked
+    private void pnlLeaveSummaryMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlLeaveSummaryMouseClicked
         // TODO add your handling code here:
         leaveSummary.setVisible(true);
         applyLeave.setVisible(false);
         approveLeave.setVisible(false);
-    }//GEN-LAST:event_jPanel4MouseClicked
+    }//GEN-LAST:event_pnlLeaveSummaryMouseClicked
 
-    private void pnlApproveLeaveReqMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlApproveLeaveReqMouseClicked
+    private void pnlLeaveApprovalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlLeaveApprovalMouseClicked
         // TODO add your handling code here:
         approveLeave.setVisible(true);
         leaveSummary.setVisible(false);
         applyLeave.setVisible(false);
-    }//GEN-LAST:event_pnlApproveLeaveReqMouseClicked
+    }//GEN-LAST:event_pnlLeaveApprovalMouseClicked
 
     private void pnlExitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlExitMouseClicked
         // TODO add your handling code here:
@@ -228,6 +279,70 @@ public class LeaveManagement extends javax.swing.JFrame {
         staffHome.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_pnlExitMouseClicked
+
+    private void pnlApplyLeaveMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlApplyLeaveMouseEntered
+        pnlApplyLeave.setBackground(new Color(152, 7, 81));
+    }//GEN-LAST:event_pnlApplyLeaveMouseEntered
+
+    private void pnlApplyLeaveMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlApplyLeaveMouseExited
+        pnlApplyLeave.setBackground(new Color(64, 0, 33));
+    }//GEN-LAST:event_pnlApplyLeaveMouseExited
+
+    private void pnlApplyLeaveMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlApplyLeaveMousePressed
+        pnlApplyLeave.setBackground(new Color(81, 0, 41));
+    }//GEN-LAST:event_pnlApplyLeaveMousePressed
+
+    private void pnlApplyLeaveMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlApplyLeaveMouseReleased
+        pnlApplyLeave.setBackground(new Color(142, 12, 78));
+    }//GEN-LAST:event_pnlApplyLeaveMouseReleased
+
+    private void pnlLeaveSummaryMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlLeaveSummaryMouseEntered
+        pnlLeaveSummary.setBackground(new Color(152, 7, 81));
+    }//GEN-LAST:event_pnlLeaveSummaryMouseEntered
+
+    private void pnlLeaveSummaryMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlLeaveSummaryMouseExited
+        pnlLeaveSummary.setBackground(new Color(64, 0, 33));
+    }//GEN-LAST:event_pnlLeaveSummaryMouseExited
+
+    private void pnlLeaveSummaryMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlLeaveSummaryMousePressed
+        pnlLeaveSummary.setBackground(new Color(81, 0, 41));
+    }//GEN-LAST:event_pnlLeaveSummaryMousePressed
+
+    private void pnlLeaveSummaryMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlLeaveSummaryMouseReleased
+        pnlLeaveSummary.setBackground(new Color(142, 12, 78));
+    }//GEN-LAST:event_pnlLeaveSummaryMouseReleased
+
+    private void pnlLeaveApprovalMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlLeaveApprovalMouseEntered
+        pnlLeaveApproval.setBackground(new Color(152, 7, 81));
+    }//GEN-LAST:event_pnlLeaveApprovalMouseEntered
+
+    private void pnlLeaveApprovalMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlLeaveApprovalMouseExited
+        pnlLeaveApproval.setBackground(new Color(64, 0, 33));
+    }//GEN-LAST:event_pnlLeaveApprovalMouseExited
+
+    private void pnlLeaveApprovalMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlLeaveApprovalMousePressed
+        pnlLeaveApproval.setBackground(new Color(81, 0, 41));
+    }//GEN-LAST:event_pnlLeaveApprovalMousePressed
+
+    private void pnlLeaveApprovalMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlLeaveApprovalMouseReleased
+        pnlLeaveApproval.setBackground(new Color(142, 12, 78));
+    }//GEN-LAST:event_pnlLeaveApprovalMouseReleased
+
+    private void pnlExitMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlExitMouseEntered
+        pnlExit.setBackground(new Color(152, 7, 81));
+    }//GEN-LAST:event_pnlExitMouseEntered
+
+    private void pnlExitMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlExitMouseExited
+        pnlExit.setBackground(new Color(64,0,33));
+    }//GEN-LAST:event_pnlExitMouseExited
+
+    private void pnlExitMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlExitMousePressed
+        pnlExit.setBackground(new Color(81, 0, 41));
+    }//GEN-LAST:event_pnlExitMousePressed
+
+    private void pnlExitMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlExitMouseReleased
+        pnlExit.setBackground(new Color(142, 12, 78));
+    }//GEN-LAST:event_pnlExitMouseReleased
 
     /**
      * @param args the command line arguments
@@ -272,10 +387,10 @@ public class LeaveManagement extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
     private javax.swing.JLabel lblLeaveTitle;
-    private javax.swing.JPanel pnlApproveLeaveReq;
+    private javax.swing.JPanel pnlApplyLeave;
     private javax.swing.JPanel pnlExit;
+    private javax.swing.JPanel pnlLeaveApproval;
+    private javax.swing.JPanel pnlLeaveSummary;
     // End of variables declaration//GEN-END:variables
 }

@@ -7,6 +7,7 @@ package com.sliit.itp.staff.ui;
 
 import com.sliit.itp.staff.ui.panel.MarkAttendance;
 import com.sliit.itp.staff.ui.panel.ViewAttendance;
+import java.awt.Color;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 
@@ -15,9 +16,11 @@ import java.awt.GridBagLayout;
  * @author user
  */
 public class AttendanceManagement extends javax.swing.JFrame {
+
     GridBagLayout gridBaglayout = new GridBagLayout();
     MarkAttendance markAttendance;
     ViewAttendance viewAttendance;
+
     /**
      * Creates new form AttendanceManagement
      */
@@ -26,17 +29,17 @@ public class AttendanceManagement extends javax.swing.JFrame {
         markAttendance = new MarkAttendance();
         viewAttendance = new ViewAttendance();
         pnlDynamic.setLayout(gridBaglayout);
-        
+
         GridBagConstraints constraints = new GridBagConstraints();
-        
+
         constraints.gridx = 0;
         constraints.gridy = 0;
         pnlDynamic.add(markAttendance, constraints);
-        
+
         constraints.gridx = 0;
         constraints.gridy = 0;
         pnlDynamic.add(viewAttendance, constraints);
-        
+
         markAttendance.setVisible(true);
         viewAttendance.setVisible(false);
     }
@@ -84,6 +87,18 @@ public class AttendanceManagement extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnViewAttendanceMouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnViewAttendanceMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnViewAttendanceMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btnViewAttendanceMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                btnViewAttendanceMouseReleased(evt);
+            }
         });
         btnViewAttendance.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -102,6 +117,18 @@ public class AttendanceManagement extends javax.swing.JFrame {
         btnMarkAttendance1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnMarkAttendance1MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnMarkAttendance1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnMarkAttendance1MouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btnMarkAttendance1MousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                btnMarkAttendance1MouseReleased(evt);
             }
         });
         btnMarkAttendance1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -122,6 +149,18 @@ public class AttendanceManagement extends javax.swing.JFrame {
         pnlExit.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 pnlExitMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                pnlExitMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                pnlExitMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                pnlExitMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                pnlExitMouseReleased(evt);
             }
         });
         pnlExit.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -175,6 +214,54 @@ public class AttendanceManagement extends javax.swing.JFrame {
         staffHome.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_pnlExitMouseClicked
+
+    private void btnMarkAttendance1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMarkAttendance1MouseEntered
+        btnMarkAttendance1.setBackground(new Color(152, 7, 81));
+    }//GEN-LAST:event_btnMarkAttendance1MouseEntered
+
+    private void btnMarkAttendance1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMarkAttendance1MouseExited
+        btnMarkAttendance1.setBackground(new Color(64, 0, 33));
+    }//GEN-LAST:event_btnMarkAttendance1MouseExited
+
+    private void btnMarkAttendance1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMarkAttendance1MousePressed
+        btnMarkAttendance1.setBackground(new Color(81, 0, 41));
+    }//GEN-LAST:event_btnMarkAttendance1MousePressed
+
+    private void btnMarkAttendance1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMarkAttendance1MouseReleased
+        btnMarkAttendance1.setBackground(new Color(142, 12, 78));
+    }//GEN-LAST:event_btnMarkAttendance1MouseReleased
+
+    private void btnViewAttendanceMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnViewAttendanceMouseEntered
+        btnViewAttendance.setBackground(new Color(152, 7, 81));
+    }//GEN-LAST:event_btnViewAttendanceMouseEntered
+
+    private void btnViewAttendanceMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnViewAttendanceMouseExited
+        btnViewAttendance.setBackground(new Color(64, 0, 33));
+    }//GEN-LAST:event_btnViewAttendanceMouseExited
+
+    private void btnViewAttendanceMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnViewAttendanceMousePressed
+        btnViewAttendance.setBackground(new Color(81, 0, 41));
+    }//GEN-LAST:event_btnViewAttendanceMousePressed
+
+    private void btnViewAttendanceMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnViewAttendanceMouseReleased
+        btnViewAttendance.setBackground(new Color(142, 12, 78));
+    }//GEN-LAST:event_btnViewAttendanceMouseReleased
+
+    private void pnlExitMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlExitMouseEntered
+        pnlExit.setBackground(new Color(152, 7, 81));
+    }//GEN-LAST:event_pnlExitMouseEntered
+
+    private void pnlExitMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlExitMouseExited
+        pnlExit.setBackground(new Color(64, 0, 33));
+    }//GEN-LAST:event_pnlExitMouseExited
+
+    private void pnlExitMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlExitMousePressed
+        pnlExit.setBackground(new Color(81, 0, 41));
+    }//GEN-LAST:event_pnlExitMousePressed
+
+    private void pnlExitMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlExitMouseReleased
+        pnlExit.setBackground(new Color(142, 12, 78));
+    }//GEN-LAST:event_pnlExitMouseReleased
 
     /**
      * @param args the command line arguments

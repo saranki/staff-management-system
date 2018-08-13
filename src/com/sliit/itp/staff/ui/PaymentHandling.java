@@ -8,6 +8,7 @@ package com.sliit.itp.staff.ui;
 import com.sliit.itp.staff.ui.panel.CreatePayslip;
 import com.sliit.itp.staff.ui.panel.PaymentReport;
 import java.awt.BorderLayout;
+import java.awt.Color;
 
 /**
  *
@@ -17,7 +18,7 @@ public class PaymentHandling extends javax.swing.JFrame {
 
     CreatePayslip payslip;
     PaymentReport paymentReport;
-    
+
     /**
      * Creates new form CreatePayroll
      */
@@ -75,6 +76,18 @@ public class PaymentHandling extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 pnlPayslipMouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                pnlPayslipMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                pnlPayslipMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                pnlPayslipMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                pnlPayslipMouseReleased(evt);
+            }
         });
         pnlPayslip.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -93,6 +106,18 @@ public class PaymentHandling extends javax.swing.JFrame {
         pnlGenerateReport.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 pnlGenerateReportMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                pnlGenerateReportMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                pnlGenerateReportMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                pnlGenerateReportMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                pnlGenerateReportMouseReleased(evt);
             }
         });
         pnlGenerateReport.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -113,6 +138,18 @@ public class PaymentHandling extends javax.swing.JFrame {
         pnlExit.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 pnlExitMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                pnlExitMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                pnlExitMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                pnlExitMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                pnlExitMouseReleased(evt);
             }
         });
         pnlExit.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -159,6 +196,54 @@ public class PaymentHandling extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_pnlExitMouseClicked
 
+    private void pnlPayslipMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlPayslipMouseEntered
+        pnlPayslip.setBackground(new Color(152, 7, 81));
+    }//GEN-LAST:event_pnlPayslipMouseEntered
+
+    private void pnlPayslipMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlPayslipMouseExited
+        pnlPayslip.setBackground(new Color(64, 0, 33));
+    }//GEN-LAST:event_pnlPayslipMouseExited
+
+    private void pnlPayslipMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlPayslipMousePressed
+        pnlPayslip.setBackground(new Color(81, 0, 41));
+    }//GEN-LAST:event_pnlPayslipMousePressed
+
+    private void pnlPayslipMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlPayslipMouseReleased
+        pnlPayslip.setBackground(new Color(142, 12, 78));
+    }//GEN-LAST:event_pnlPayslipMouseReleased
+
+    private void pnlGenerateReportMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlGenerateReportMouseEntered
+        pnlGenerateReport.setBackground(new Color(152, 7, 81));
+    }//GEN-LAST:event_pnlGenerateReportMouseEntered
+
+    private void pnlGenerateReportMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlGenerateReportMouseExited
+        pnlGenerateReport.setBackground(new Color(64, 0, 33));
+    }//GEN-LAST:event_pnlGenerateReportMouseExited
+
+    private void pnlGenerateReportMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlGenerateReportMousePressed
+        pnlGenerateReport.setBackground(new Color(81, 0, 41));
+    }//GEN-LAST:event_pnlGenerateReportMousePressed
+
+    private void pnlGenerateReportMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlGenerateReportMouseReleased
+        pnlGenerateReport.setBackground(new Color(142, 12, 78));
+    }//GEN-LAST:event_pnlGenerateReportMouseReleased
+
+    private void pnlExitMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlExitMouseEntered
+        pnlExit.setBackground(new Color(152, 7, 81));
+    }//GEN-LAST:event_pnlExitMouseEntered
+
+    private void pnlExitMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlExitMouseExited
+        pnlExit.setBackground(new Color(64, 0, 33));
+    }//GEN-LAST:event_pnlExitMouseExited
+
+    private void pnlExitMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlExitMousePressed
+        pnlExit.setBackground(new Color(81, 0, 41));
+    }//GEN-LAST:event_pnlExitMousePressed
+
+    private void pnlExitMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlExitMouseReleased
+        pnlExit.setBackground(new Color(142, 12, 78));
+    }//GEN-LAST:event_pnlExitMouseReleased
+
     /**
      * @param args the command line arguments
      */
@@ -197,21 +282,11 @@ public class PaymentHandling extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel pnlAddEmployee;
-    private javax.swing.JPanel pnlAddEmployee1;
     private javax.swing.JPanel pnlDynamic;
     private javax.swing.JPanel pnlExit;
     private javax.swing.JPanel pnlGenerateReport;

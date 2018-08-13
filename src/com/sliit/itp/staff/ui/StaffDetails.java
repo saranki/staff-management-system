@@ -8,6 +8,7 @@ package com.sliit.itp.staff.ui;
 import com.sliit.itp.staff.ui.panel.AddEmployee;
 import com.sliit.itp.staff.ui.panel.UserDetails;
 import java.awt.BorderLayout;
+import java.awt.Color;
 
 /**
  *
@@ -80,6 +81,18 @@ public class StaffDetails extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 pnlAddEmployeeMouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                pnlAddEmployeeMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                pnlAddEmployeeMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                pnlAddEmployeeMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                pnlAddEmployeeMouseReleased(evt);
+            }
         });
         pnlAddEmployee.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -98,6 +111,18 @@ public class StaffDetails extends javax.swing.JFrame {
         pnlUserDetails.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 pnlUserDetailsMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                pnlUserDetailsMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                pnlUserDetailsMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                pnlUserDetailsMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                pnlUserDetailsMouseReleased(evt);
             }
         });
         pnlUserDetails.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -118,6 +143,18 @@ public class StaffDetails extends javax.swing.JFrame {
         pnlExit.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 pnlExitMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                pnlExitMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                pnlExitMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                pnlExitMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                pnlExitMouseReleased(evt);
             }
         });
         pnlExit.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -163,6 +200,54 @@ public class StaffDetails extends javax.swing.JFrame {
         staffHome.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_pnlExitMouseClicked
+
+    private void pnlAddEmployeeMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlAddEmployeeMouseEntered
+        pnlAddEmployee.setBackground(new Color(152, 7, 81));
+    }//GEN-LAST:event_pnlAddEmployeeMouseEntered
+
+    private void pnlAddEmployeeMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlAddEmployeeMouseExited
+        pnlAddEmployee.setBackground(new Color(64, 0, 33));
+    }//GEN-LAST:event_pnlAddEmployeeMouseExited
+
+    private void pnlAddEmployeeMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlAddEmployeeMousePressed
+        pnlAddEmployee.setBackground(new Color(81, 0, 41));
+    }//GEN-LAST:event_pnlAddEmployeeMousePressed
+
+    private void pnlAddEmployeeMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlAddEmployeeMouseReleased
+        pnlAddEmployee.setBackground(new Color(142, 12, 78));
+    }//GEN-LAST:event_pnlAddEmployeeMouseReleased
+
+    private void pnlUserDetailsMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlUserDetailsMouseEntered
+        pnlUserDetails.setBackground(new Color(152, 7, 81));
+    }//GEN-LAST:event_pnlUserDetailsMouseEntered
+
+    private void pnlUserDetailsMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlUserDetailsMouseExited
+        pnlUserDetails.setBackground(new Color(64, 0, 33));
+    }//GEN-LAST:event_pnlUserDetailsMouseExited
+
+    private void pnlUserDetailsMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlUserDetailsMousePressed
+        pnlUserDetails.setBackground(new Color(81, 0, 41));
+    }//GEN-LAST:event_pnlUserDetailsMousePressed
+
+    private void pnlUserDetailsMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlUserDetailsMouseReleased
+        pnlUserDetails.setBackground(new Color(142, 12, 78));
+    }//GEN-LAST:event_pnlUserDetailsMouseReleased
+
+    private void pnlExitMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlExitMouseEntered
+        pnlExit.setBackground(new Color(152, 7, 81));
+    }//GEN-LAST:event_pnlExitMouseEntered
+
+    private void pnlExitMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlExitMouseExited
+        pnlExit.setBackground(new Color(64, 0, 33));
+    }//GEN-LAST:event_pnlExitMouseExited
+
+    private void pnlExitMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlExitMousePressed
+        pnlExit.setBackground(new Color(81, 0, 41));
+    }//GEN-LAST:event_pnlExitMousePressed
+
+    private void pnlExitMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlExitMouseReleased
+        pnlExit.setBackground(new Color(142, 12, 78));
+    }//GEN-LAST:event_pnlExitMouseReleased
 
     /**
      * @param args the command line arguments

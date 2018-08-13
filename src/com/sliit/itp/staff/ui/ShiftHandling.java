@@ -8,6 +8,7 @@ package com.sliit.itp.staff.ui;
 import com.sliit.itp.staff.ui.panel.HandleStaffShifts;
 import com.sliit.itp.staff.ui.panel.ShiftReport;
 import java.awt.BorderLayout;
+import java.awt.Color;
 
 /**
  *
@@ -75,6 +76,18 @@ public class ShiftHandling extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 pnlShiftsMouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                pnlShiftsMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                pnlShiftsMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                pnlShiftsMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                pnlShiftsMouseReleased(evt);
+            }
         });
         pnlShifts.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -93,6 +106,18 @@ public class ShiftHandling extends javax.swing.JFrame {
         pnlGenerateReport.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 pnlGenerateReportMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                pnlGenerateReportMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                pnlGenerateReportMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                pnlGenerateReportMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                pnlGenerateReportMouseReleased(evt);
             }
         });
         pnlGenerateReport.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -113,6 +138,18 @@ public class ShiftHandling extends javax.swing.JFrame {
         pnlExit.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 pnlExitMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                pnlExitMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                pnlExitMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                pnlExitMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                pnlExitMouseReleased(evt);
             }
         });
         pnlExit.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -158,6 +195,54 @@ public class ShiftHandling extends javax.swing.JFrame {
         staffHome.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_pnlExitMouseClicked
+
+    private void pnlShiftsMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlShiftsMouseEntered
+        pnlShifts.setBackground(new Color(152, 7, 81));
+    }//GEN-LAST:event_pnlShiftsMouseEntered
+
+    private void pnlShiftsMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlShiftsMouseExited
+        pnlShifts.setBackground(new Color(64, 0, 33));
+    }//GEN-LAST:event_pnlShiftsMouseExited
+
+    private void pnlShiftsMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlShiftsMousePressed
+        pnlShifts.setBackground(new Color(81, 0, 41));
+    }//GEN-LAST:event_pnlShiftsMousePressed
+
+    private void pnlShiftsMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlShiftsMouseReleased
+        pnlShifts.setBackground(new Color(142, 12, 78));
+    }//GEN-LAST:event_pnlShiftsMouseReleased
+
+    private void pnlGenerateReportMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlGenerateReportMouseEntered
+        pnlGenerateReport.setBackground(new Color(152, 7, 81));
+    }//GEN-LAST:event_pnlGenerateReportMouseEntered
+
+    private void pnlGenerateReportMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlGenerateReportMouseExited
+        pnlGenerateReport.setBackground(new Color(64, 0, 33));
+    }//GEN-LAST:event_pnlGenerateReportMouseExited
+
+    private void pnlGenerateReportMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlGenerateReportMousePressed
+        pnlGenerateReport.setBackground(new Color(81, 0, 41));
+    }//GEN-LAST:event_pnlGenerateReportMousePressed
+
+    private void pnlGenerateReportMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlGenerateReportMouseReleased
+        pnlGenerateReport.setBackground(new Color(142, 12, 78));
+    }//GEN-LAST:event_pnlGenerateReportMouseReleased
+
+    private void pnlExitMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlExitMouseEntered
+        pnlExit.setBackground(new Color(152, 7, 81));
+    }//GEN-LAST:event_pnlExitMouseEntered
+
+    private void pnlExitMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlExitMouseExited
+        pnlExit.setBackground(new Color(64, 0, 33));
+    }//GEN-LAST:event_pnlExitMouseExited
+
+    private void pnlExitMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlExitMousePressed
+        pnlExit.setBackground(new Color(81, 0, 41));
+    }//GEN-LAST:event_pnlExitMousePressed
+
+    private void pnlExitMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlExitMouseReleased
+        pnlExit.setBackground(new Color(142, 12, 78));
+    }//GEN-LAST:event_pnlExitMouseReleased
 
     /**
      * @param args the command line arguments
