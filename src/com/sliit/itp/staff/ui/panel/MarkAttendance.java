@@ -20,7 +20,6 @@ public class MarkAttendance extends javax.swing.JPanel {
     Attendance attendance = new Attendance();
     public MarkAttendance() {
         initComponents();
-        lblCurrentDateTime.setText(String.valueOf(attendance.getCurrentDateTime()));
     }
 
     /**

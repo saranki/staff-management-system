@@ -10,7 +10,5 @@ package com.sliit.itp.service;
  * @author user
  */
 public class Attendance {
-    public long getCurrentDateTime(){     
-        return System.currentTimeMillis();
-    }
+    
 }
