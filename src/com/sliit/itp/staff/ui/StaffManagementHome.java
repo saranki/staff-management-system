@@ -5,6 +5,9 @@
  */
 package com.sliit.itp.staff.ui;
 
+import java.awt.Color;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author user
@@ -28,7 +31,7 @@ public class StaffManagementHome extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
+        pnlExit = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         pnlStaffDetails = new javax.swing.JPanel();
@@ -37,13 +40,13 @@ public class StaffManagementHome extends javax.swing.JFrame {
         pnlPayroll = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jPanel5 = new javax.swing.JPanel();
+        pnlLeave = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         pnlWorkShift = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
-        jPanel8 = new javax.swing.JPanel();
+        pnlMarkAttendance = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -64,29 +67,41 @@ public class StaffManagementHome extends javax.swing.JFrame {
         jPanel1.setPreferredSize(new java.awt.Dimension(750, 540));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        jPanel2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel2.setName("pnlMarkAttendance"); // NOI18N
-        jPanel2.setPreferredSize(new java.awt.Dimension(230, 200));
-        jPanel2.addMouseListener(new java.awt.event.MouseAdapter() {
+        pnlExit.setBackground(new java.awt.Color(255, 255, 255));
+        pnlExit.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        pnlExit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        pnlExit.setName("pnlMarkAttendance"); // NOI18N
+        pnlExit.setPreferredSize(new java.awt.Dimension(230, 200));
+        pnlExit.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jPanel2MouseClicked(evt);
+                pnlExitMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                pnlExitMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                pnlExitMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                pnlExitMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                pnlExitMouseReleased(evt);
             }
         });
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        pnlExit.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Segoe UI Light", 0, 20)); // NOI18N
         jLabel2.setText("EXIT SYSTEM");
         jLabel2.setName("lblMarkAttendance"); // NOI18N
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, -1, -1));
+        pnlExit.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, -1, -1));
 
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/exit.png"))); // NOI18N
         jLabel10.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, -1, -1));
+        pnlExit.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, -1, -1));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 320, -1, -1));
+        jPanel1.add(pnlExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 320, -1, -1));
 
         pnlStaffDetails.setBackground(new java.awt.Color(255, 255, 255));
         pnlStaffDetails.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -96,6 +111,18 @@ public class StaffManagementHome extends javax.swing.JFrame {
         pnlStaffDetails.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 pnlStaffDetailsMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                pnlStaffDetailsMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                pnlStaffDetailsMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                pnlStaffDetailsMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                pnlStaffDetailsMouseReleased(evt);
             }
         });
         pnlStaffDetails.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -122,6 +149,18 @@ public class StaffManagementHome extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 pnlPayrollMouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                pnlPayrollMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                pnlPayrollMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                pnlPayrollMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                pnlPayrollMouseReleased(evt);
+            }
         });
         pnlPayroll.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -137,29 +176,41 @@ public class StaffManagementHome extends javax.swing.JFrame {
 
         jPanel1.add(pnlPayroll, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, -1, -1));
 
-        jPanel5.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel5.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        jPanel5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel5.setName("pnlLeave"); // NOI18N
-        jPanel5.setPreferredSize(new java.awt.Dimension(230, 200));
-        jPanel5.addMouseListener(new java.awt.event.MouseAdapter() {
+        pnlLeave.setBackground(new java.awt.Color(255, 255, 255));
+        pnlLeave.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        pnlLeave.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        pnlLeave.setName("pnlLeave"); // NOI18N
+        pnlLeave.setPreferredSize(new java.awt.Dimension(230, 200));
+        pnlLeave.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jPanel5MouseClicked(evt);
+                pnlLeaveMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                pnlLeaveMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                pnlLeaveMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                pnlLeaveMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                pnlLeaveMouseReleased(evt);
             }
         });
-        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        pnlLeave.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel4.setFont(new java.awt.Font("Segoe UI Light", 0, 20)); // NOI18N
         jLabel4.setText("LEAVE DETAILS");
         jLabel4.setName("lblLeave"); // NOI18N
-        jPanel5.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, -1, -1));
+        pnlLeave.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, -1, -1));
 
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/calendar.png"))); // NOI18N
         jLabel11.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel5.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, -1, -1));
+        pnlLeave.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, -1, -1));
 
-        jPanel1.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 110, -1, -1));
+        jPanel1.add(pnlLeave, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 110, -1, -1));
 
         pnlWorkShift.setBackground(new java.awt.Color(255, 255, 255));
         pnlWorkShift.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -169,6 +220,18 @@ public class StaffManagementHome extends javax.swing.JFrame {
         pnlWorkShift.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 pnlWorkShiftMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                pnlWorkShiftMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                pnlWorkShiftMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                pnlWorkShiftMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                pnlWorkShiftMouseReleased(evt);
             }
         });
         pnlWorkShift.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -185,29 +248,41 @@ public class StaffManagementHome extends javax.swing.JFrame {
 
         jPanel1.add(pnlWorkShift, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 320, -1, -1));
 
-        jPanel8.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel8.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        jPanel8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel8.setName("pnlMarkAttendance"); // NOI18N
-        jPanel8.setPreferredSize(new java.awt.Dimension(230, 200));
-        jPanel8.addMouseListener(new java.awt.event.MouseAdapter() {
+        pnlMarkAttendance.setBackground(new java.awt.Color(255, 255, 255));
+        pnlMarkAttendance.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        pnlMarkAttendance.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        pnlMarkAttendance.setName("pnlMarkAttendance"); // NOI18N
+        pnlMarkAttendance.setPreferredSize(new java.awt.Dimension(230, 200));
+        pnlMarkAttendance.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jPanel8MouseClicked(evt);
+                pnlMarkAttendanceMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                pnlMarkAttendanceMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                pnlMarkAttendanceMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                pnlMarkAttendanceMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                pnlMarkAttendanceMouseReleased(evt);
             }
         });
-        jPanel8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        pnlMarkAttendance.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel12.setFont(new java.awt.Font("Segoe UI Light", 0, 20)); // NOI18N
         jLabel12.setText("MARK ATTENDANCE");
         jLabel12.setName("lblMarkAttendance"); // NOI18N
-        jPanel8.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, -1, -1));
+        pnlMarkAttendance.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, -1, -1));
 
         jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/barcode-scanner.png"))); // NOI18N
         jLabel14.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel8.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, -1, -1));
+        pnlMarkAttendance.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, -1, -1));
 
-        jPanel1.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 110, -1, -1));
+        jPanel1.add(pnlMarkAttendance, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 110, -1, -1));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Light", 0, 36)); // NOI18N
         jLabel1.setText("STAFF MANAGEMENT SYSTEM");
@@ -220,18 +295,18 @@ public class StaffManagementHome extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
     // Open Leave Details UI
-    private void jPanel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel5MouseClicked
+    private void pnlLeaveMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlLeaveMouseClicked
         LeaveManagement leaveManagement = new LeaveManagement();
         leaveManagement.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jPanel5MouseClicked
+    }//GEN-LAST:event_pnlLeaveMouseClicked
 
     // Open Attendance UI
-    private void jPanel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel8MouseClicked
-       AttendanceManagement attendance = new AttendanceManagement();
-       attendance.setVisible(true);
-       this.dispose();
-    }//GEN-LAST:event_jPanel8MouseClicked
+    private void pnlMarkAttendanceMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlMarkAttendanceMouseClicked
+        AttendanceManagement attendance = new AttendanceManagement();
+        attendance.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_pnlMarkAttendanceMouseClicked
 
     private void pnlStaffDetailsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlStaffDetailsMouseClicked
         StaffDetails staffDetails = new StaffDetails();
@@ -239,10 +314,16 @@ public class StaffManagementHome extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_pnlStaffDetailsMouseClicked
 
-    private void jPanel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MouseClicked
-        // this.dispose();
-        System.exit(0);
-    }//GEN-LAST:event_jPanel2MouseClicked
+    private void pnlExitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlExitMouseClicked
+        int confirmed = JOptionPane.showConfirmDialog(null,
+                "Are you sure you want to exit the System?", 
+                "Exit Staff Management Dashboard",
+                JOptionPane.YES_NO_OPTION);
+
+        if (confirmed == JOptionPane.YES_OPTION) {
+            System.exit(0);
+        }
+    }//GEN-LAST:event_pnlExitMouseClicked
 
     private void pnlPayrollMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlPayrollMouseClicked
         PaymentHandling payroll = new PaymentHandling();
@@ -256,6 +337,101 @@ public class StaffManagementHome extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_pnlWorkShiftMouseClicked
 
+    private void pnlStaffDetailsMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlStaffDetailsMousePressed
+        pnlStaffDetails.setBackground(new Color(229, 229, 229));
+    }//GEN-LAST:event_pnlStaffDetailsMousePressed
+
+    private void pnlStaffDetailsMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlStaffDetailsMouseReleased
+        pnlStaffDetails.setBackground(new Color(255, 255, 255));
+    }//GEN-LAST:event_pnlStaffDetailsMouseReleased
+
+    private void pnlStaffDetailsMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlStaffDetailsMouseEntered
+        pnlStaffDetails.setBackground(new Color(220, 220, 220));
+    }//GEN-LAST:event_pnlStaffDetailsMouseEntered
+
+    private void pnlStaffDetailsMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlStaffDetailsMouseExited
+        pnlStaffDetails.setBackground(new Color(255, 255, 255));
+    }//GEN-LAST:event_pnlStaffDetailsMouseExited
+
+    private void pnlMarkAttendanceMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlMarkAttendanceMouseEntered
+        pnlMarkAttendance.setBackground(new Color(220, 220, 220));
+    }//GEN-LAST:event_pnlMarkAttendanceMouseEntered
+
+    private void pnlMarkAttendanceMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlMarkAttendanceMouseExited
+        pnlMarkAttendance.setBackground(new Color(255, 255, 255));
+    }//GEN-LAST:event_pnlMarkAttendanceMouseExited
+
+    private void pnlMarkAttendanceMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlMarkAttendanceMousePressed
+        pnlMarkAttendance.setBackground(new Color(229, 229, 229));
+    }//GEN-LAST:event_pnlMarkAttendanceMousePressed
+
+    private void pnlMarkAttendanceMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlMarkAttendanceMouseReleased
+        pnlMarkAttendance.setBackground(new Color(255, 255, 255));
+    }//GEN-LAST:event_pnlMarkAttendanceMouseReleased
+
+    private void pnlLeaveMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlLeaveMouseEntered
+        pnlLeave.setBackground(new Color(220, 220, 220));
+    }//GEN-LAST:event_pnlLeaveMouseEntered
+
+    private void pnlLeaveMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlLeaveMouseExited
+        pnlLeave.setBackground(new Color(255, 255, 255));
+    }//GEN-LAST:event_pnlLeaveMouseExited
+
+    private void pnlLeaveMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlLeaveMousePressed
+        pnlLeave.setBackground(new Color(229, 229, 229));
+    }//GEN-LAST:event_pnlLeaveMousePressed
+
+    private void pnlLeaveMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlLeaveMouseReleased
+        pnlLeave.setBackground(new Color(255, 255, 255));
+    }//GEN-LAST:event_pnlLeaveMouseReleased
+
+    private void pnlPayrollMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlPayrollMouseEntered
+        pnlPayroll.setBackground(new Color(220, 220, 220));
+    }//GEN-LAST:event_pnlPayrollMouseEntered
+
+    private void pnlPayrollMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlPayrollMouseExited
+        pnlPayroll.setBackground(new Color(255, 255, 255));
+    }//GEN-LAST:event_pnlPayrollMouseExited
+
+    private void pnlPayrollMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlPayrollMousePressed
+        pnlPayroll.setBackground(new Color(229, 229, 229));
+    }//GEN-LAST:event_pnlPayrollMousePressed
+
+    private void pnlPayrollMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlPayrollMouseReleased
+        pnlPayroll.setBackground(new Color(255, 255, 255));
+    }//GEN-LAST:event_pnlPayrollMouseReleased
+
+    private void pnlWorkShiftMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlWorkShiftMouseEntered
+        pnlWorkShift.setBackground(new Color(220, 220, 220));
+    }//GEN-LAST:event_pnlWorkShiftMouseEntered
+
+    private void pnlWorkShiftMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlWorkShiftMouseExited
+        pnlWorkShift.setBackground(new Color(255, 255, 255));
+    }//GEN-LAST:event_pnlWorkShiftMouseExited
+
+    private void pnlWorkShiftMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlWorkShiftMousePressed
+        pnlWorkShift.setBackground(new Color(229, 229, 229));
+    }//GEN-LAST:event_pnlWorkShiftMousePressed
+
+    private void pnlWorkShiftMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlWorkShiftMouseReleased
+        pnlWorkShift.setBackground(new Color(255, 255, 255));
+    }//GEN-LAST:event_pnlWorkShiftMouseReleased
+
+    private void pnlExitMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlExitMouseEntered
+        pnlExit.setBackground(new Color(220, 220, 220));
+    }//GEN-LAST:event_pnlExitMouseEntered
+
+    private void pnlExitMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlExitMouseExited
+        pnlExit.setBackground(new Color(255, 255, 255));
+    }//GEN-LAST:event_pnlExitMouseExited
+
+    private void pnlExitMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlExitMousePressed
+        pnlExit.setBackground(new Color(229, 229, 229));
+    }//GEN-LAST:event_pnlExitMousePressed
+
+    private void pnlExitMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlExitMouseReleased
+        pnlExit.setBackground(new Color(255, 255, 255));
+    }//GEN-LAST:event_pnlExitMouseReleased
 
     /**
      * @param args the command line arguments
@@ -307,9 +483,9 @@ public class StaffManagementHome extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel pnlExit;
+    private javax.swing.JPanel pnlLeave;
+    private javax.swing.JPanel pnlMarkAttendance;
     private javax.swing.JPanel pnlPayroll;
     private javax.swing.JPanel pnlStaffDetails;
     private javax.swing.JPanel pnlWorkShift;
